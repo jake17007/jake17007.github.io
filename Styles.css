@@ -1,0 +1,461 @@
+@charset "UTF-8";
+html {
+}
+body {
+	padding: 0;
+	font-family: source-sans-pro;
+	font-style: normal;
+	font-weight: 300;
+	max-width: 1145px;
+	text-align: center;
+	width: 100%;
+	margin: 0 auto;
+	display: block;
+	position: relative;
+}
+ul {
+	-webkit-padding-start: 0px;
+	margin: 0;
+	padding: 0;
+}
+footer {
+	background-color: #000000;
+	color: #FFFFFF;
+	font-weight: 600;
+	font-size: x-small;
+	text-align: center;
+	max-width: 1145px;
+	margin-top: 0;
+	margin-right: auto;
+	margin-bottom: 0;
+	margin-left: auto;
+	padding-top: 109px;
+	padding-right: 10px;
+	padding-bottom: 109px;
+	padding-left: 10px;
+	clear: both;
+}
+li {
+	list-style-type: none;
+	display: inline;
+	padding: 0;
+	margin: 0;
+}
+
+/*---------------------------------- Nav --------------------------------*/
+
+#nav-wrapper {
+	left: 0;
+	margin: 0 75px;
+	margin-top: 17px;
+	position: fixed;
+	right: 0;
+	top: 0;
+	z-index: 9999;
+}
+#nav-top {
+	max-width: 1105px;
+	position: relative;
+	margin: 0 auto;
+	padding: 0 0 15px;
+}
+#navLeft {
+	float: left;
+	width: 50%;
+	z-index: 100;
+	margin: 0;
+	display: block;
+}
+#navLeft ul {
+	text-align: left;
+	float: left;
+	-webkit-padding-start: 0px;
+}
+#navRight {
+	float: right;
+	width: 50%;
+	margin: 0;
+	display: block;
+	padding-top: 4px;
+	z-index: 100;
+}
+#navRight ul {
+	text-align: right;
+	float: right;
+	-webkit-padding-start: 0px;
+}
+nav a {
+	color: #000000;
+	text-decoration: none;
+	text-shadow: 0px 0px;
+	font-weight: 200;
+}
+.navHome {
+	background-image: url(Images/Home.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	-webkit-transition: all .5s ease 0s;
+	-o-transition: all .5s ease 0s;
+	transition: all .5s ease 0s;
+	padding-left: 10px;
+	padding-right: 9px;
+	text-align: center;
+	background-position: 50% 50%;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+.navAbout {
+	background-image: url(Images/About.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	-webkit-transition: all .5s ease 0s;
+	-o-transition: all .5s ease 0s;
+	transition: all .5s ease 0s;
+	padding-right: 9px;
+	padding-left: 11px;
+	background-size: 100% 100%;
+	background-position: 50% 50%;
+	padding-top: 6px;
+	padding-bottom: 5px;
+}
+.navPortfolio {
+	background-image: url(Images/Portfolio.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	-webkit-transition: all .5s ease 0s;
+	-o-transition: all .5s ease 0s;
+	transition: all .5s ease 0s;
+	padding-left: 9px;
+	padding-right: 8px;
+	background-position: 50% 50%;
+	text-align: center;
+	padding-top: 7px;
+	padding-bottom: 5px;
+}
+.navContact {
+	background-image: url(Images/Contact.png);
+	background-size: 100% 100%;
+	-webkit-transition: all .5s ease 0s;
+	-o-transition: all .5s ease 0s;
+	transition: all .5s ease 0s;
+	padding-left: 14px;
+	background-repeat: no-repeat;
+	text-align: center;
+	background-position: 50% 50%;
+	padding-right: 19px;
+	padding-top: 10px;
+	padding-bottom: 5px;
+	margin-left: 0px;
+}
+.navHome:hover {
+	color: Red;
+}
+.navAbout:hover {
+	color: Red;
+}
+.navPortfolio:hover {
+	color: Red;
+}
+.navContact:hover {
+	color: Red;
+}
+
+header {
+
+}
+.buttonMusic {
+	padding-right: 6px;
+	padding-bottom: 6px;
+	padding-left: 6px;
+	display: inline-block;
+	margin-left: 6px;
+	margin-right: 6px;
+	width: 60px;
+	text-align: center;
+	color: #FFFFFF;
+	text-decoration: none;
+	font-weight: 500;
+	border: 1px solid #FFFFFF;
+	padding-top: 4px;
+}
+.nameLogo {
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+	text-align: center;
+	width: 100%;
+	border-left-color: #FFFFFF;
+	border-right-color: #FFFFFF;
+	position: relative;
+	max-width: 1030.5px;
+	padding-left: 2px;
+	padding-top: 0px;
+	background-position: 0% 0%;
+}
+.logoEmail {
+	background-image: url(Images/Logos/email.png);
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: 50% 50%;
+}
+.logoSoundcloud {
+	background-image: url(Images/Logos/soundcloud.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+	width: 46px;
+	height: 30px;
+	display: inline-block;
+	margin-right: 4px;
+	margin-left: 4px;
+}
+.logoGoogle {
+	background-image: url(Images/Logos/google.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+	width: 30px;
+	height: 30px;
+	display: inline-block;
+}
+.logoTwitter {
+	background-image: url(Images/Logos/twitter.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+	width: 30px;
+	height: 30px;
+	display: inline-block;
+	margin-left: 4px;
+	background-position: 50% 50%;
+}
+.logoFacebook {
+	width: 30px;
+	height: 30px;
+	display: inline-block;
+	background-image: url(Images/Logos/facebook.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: 50% 50%;
+}
+.logoInstagram {
+	width: 30px;
+	height: 30px;
+	display: inline-block;
+	background-image: url(Images/Logos/instagram.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+.logoHome {
+	width: 30px;
+	height: 30px;
+	display: inline-block;
+	background-image: url(Images/jb.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+
+/*------------------------------- Main Content ---------------------------*/
+
+.mainContent {
+	display: block;
+}
+h1 {
+	font-family: source-serif-pro;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 2em;
+	text-shadow: 0 0px #FFFFFF;
+	text-align: center;
+}
+h2 {
+	font-family: just-another-hand;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 2em;
+}
+.sectionTop {
+	width: 90%;
+	margin-left: 5%;
+	margin-right: 5%;
+}
+.sectionRight {
+	width: 50%;
+	margin-left: 2.5%;
+	margin-right: 5%;
+	float: right;
+	background-color: #FFFFFF;
+	border-top: 10px solid #000000;
+	border-bottom: 10px solid #000000;
+	padding-top: 0px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	padding-left: 0px;
+}
+
+.sectionFull {
+	width: 90%;
+	margin-left: 2.5%;
+	margin-right: 5%;
+	float: right;
+	background-color: #FFFFFF;
+	border-top: 10px solid #000000;
+	border-bottom: 10px solid #000000;
+	margin-bottom: 5%;
+	padding-top: 10px;
+	padding-right: 10px;
+	padding-bottom: 10px;
+	padding-left: 10px;
+}
+.block-text-center {
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	border-bottom-style: solid;
+	border-bottom-width: thin;
+	width: 74%;
+	padding-bottom: 50px;
+}
+.block-text-center .sectionContent p {
+	margin-left: 10%;
+	margin-right: 10%;
+	margin-top: 0px;
+}
+
+/*---------------------------------- Banner ------------------------------*/
+
+.banner-main-image {
+	background-repeat: no-repeat;
+	max-width: 1145px;
+	display: block;
+	position: relative;
+	z-index: 90;
+}
+
+.banner-wrapper {
+	min-height: 320px;
+	display: block;
+	position: relative;
+	width: 100%;
+}
+.twoButtons {
+	text-align: center;
+}
+.main-image {
+	max-width: 1145px;
+	width: 100%
+}
+.banner-middle-wrapper {
+	position: absolute;
+	z-index: 96;
+	top: 184px;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+	width: 100%;
+	max-width: 1145px;
+}
+
+/*-----------------------------Recent Events-------------------------------*/
+
+.recent-events-wrapper2 {
+	background-repeat: no-repeat;
+	max-width: 1145px;
+	display: block;
+	position: relative;
+}
+.recent-events-wrapper2:before, .recent-events-wrapper2:after {
+	content: "";
+}
+.recent-events-sq-container:before, .recent-events-container:after {
+	content: "";
+}
+.recent-events-sq-container {
+	width: 25%;
+	display: inline-block;
+	border: 1px solid black;
+	min-height: 50px;
+}
+.recent-events-sq-1, .recent-events-sq-2, .recent-events-sq-3 {
+	width: 100%;
+}
+.recent-events-sq-1 {
+	background-image: url(Images/IU_Logo.jpg);
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+.recent-events-sq-2 {
+
+}
+.recent-events-sq-3 {
+
+}
+
+
+/*----------- older ------------*/
+.recent-events-wrapper {
+	margin: 0 auto;
+	-webkit-padding-start: 0px;
+	width: auto;
+	display: block;
+}
+.recent-events-wrapper:before, .recent-events-wrapper:after {
+	content: ""
+	display: table;
+}
+.recent-events-wapper ul {
+	padding: 0;
+	margin: 0;
+}
+/*
+.recent-events-sq{
+	list-style-type: none;
+	width: 33.333%;
+	height: auto;
+	background-position: 50% 50%;
+	float: left;
+}
+
+.recent-events-1 {
+	width: 90%;
+	height: auto;
+	margin: 0 auto;
+	display: block;
+	border: 1px solid black;
+	background-image: url(Images/IU_Logo.jpg);
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: 50% 50%;
+	position: relative;
+}
+.recent-events-2 {
+	width: 90%;
+	height: 90%;
+	margin: 0 auto;
+	display: block;
+	border: 1px solid black;
+	background-image: url(Images/IU_Logo.jpg);
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: 50% 50%;
+}
+.recent-events-3 {
+	width: 90%;
+	height: 90%;
+	margin: 0 auto;
+	display: block;
+	border: 1px solid black;
+	background-image: url(Images/IU_Logo.jpg);
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: 50% 50%;
+}
+
+*/
+.sectionContent h1 {
+}
+video {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
