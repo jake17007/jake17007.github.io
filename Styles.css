@@ -1,11 +1,19 @@
 @charset "UTF-8";
 html {
 }
+svg {
+	height: 0;
+	width: 0;
+	margin: 0;
+	padding: 0;
+	-webkit-transform-origin: 0;
+
+}
 body {
 	padding: 0;
 	font-family: source-sans-pro;
 	font-style: normal;
-	font-weight: 300;
+	font-weight: 400;
 	max-width: 1145px;
 	text-align: center;
 	width: 100%;
@@ -41,6 +49,12 @@ li {
 	padding: 0;
 	margin: 0;
 }
+.shadowed {
+	-webkit-filter: drop-shadow(12px 12px 25px rgba(0,0,0,0.5));
+	filter: url(#drop-shadow);
+	-ms-filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
+	filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
+}
 
 /*---------------------------------- Nav --------------------------------*/
 
@@ -63,13 +77,13 @@ li {
 	float: left;
 	width: 50%;
 	z-index: 100;
-	margin: 0;
 	display: block;
 }
 #navLeft ul {
 	text-align: left;
 	float: left;
 	-webkit-padding-start: 0px;
+	margin-top: -9px;
 }
 #navRight {
 	float: right;
@@ -88,64 +102,69 @@ nav a {
 	color: #000000;
 	text-decoration: none;
 	text-shadow: 0px 0px;
-	font-weight: 200;
+	font-weight: 400;
 }
 .navHome {
-	background-image: url(Images/Home.png);
+	background-image: url(Images/Line-scribbles/Home.png);
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
 	-webkit-transition: all .5s ease 0s;
 	-o-transition: all .5s ease 0s;
 	transition: all .5s ease 0s;
-	padding-left: 10px;
-	padding-right: 9px;
+	padding-left: 22px;
+	padding-right: 22px;
 	text-align: center;
-	background-position: 50% 50%;
-	padding-top: 5px;
-	padding-bottom: 5px;
-}
-.navAbout {
-	background-image: url(Images/About.png);
-	background-size: 100% 100%;
-	background-repeat: no-repeat;
-	-webkit-transition: all .5s ease 0s;
-	-o-transition: all .5s ease 0s;
-	transition: all .5s ease 0s;
-	padding-right: 9px;
-	padding-left: 11px;
-	background-size: 100% 100%;
 	background-position: 50% 50%;
 	padding-top: 6px;
-	padding-bottom: 5px;
+	padding-bottom: 8px;
+	margin-left: 0px;
+	margin-right: -3px;
+}
+.navAbout {
+	background-image: url(Images/Line-scribbles/About.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	-webkit-transition: all .5s ease 0s;
+	-o-transition: all .5s ease 0s;
+	transition: all .5s ease 0s;
+	padding-right: 23px;
+	padding-left: 23px;
+	background-size: 100% 100%;
+	background-position: 50% 50%;
+	padding-top: 7px;
+	padding-bottom: 7px;
+	margin-right: -1px;
 }
 .navPortfolio {
-	background-image: url(Images/Portfolio.png);
+	background-image: url(Images/Line-scribbles/Portfolio.png);
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
 	-webkit-transition: all .5s ease 0s;
 	-o-transition: all .5s ease 0s;
 	transition: all .5s ease 0s;
-	padding-left: 9px;
-	padding-right: 8px;
+	padding-left: 17px;
+	padding-right: 17px;
 	background-position: 50% 50%;
 	text-align: center;
-	padding-top: 7px;
-	padding-bottom: 5px;
+	padding-top: 9px;
+	padding-bottom: 7px;
+	margin-right: -2px;
 }
 .navContact {
-	background-image: url(Images/Contact.png);
+	background-image: url(Images/Line-scribbles/Contact.png);
 	background-size: 100% 100%;
 	-webkit-transition: all .5s ease 0s;
 	-o-transition: all .5s ease 0s;
 	transition: all .5s ease 0s;
-	padding-left: 14px;
+	padding-left: 21px;
 	background-repeat: no-repeat;
 	text-align: center;
 	background-position: 50% 50%;
-	padding-right: 19px;
-	padding-top: 10px;
-	padding-bottom: 5px;
+	padding-right: 25px;
+	padding-top: 12px;
+	padding-bottom: 7px;
 	margin-left: 0px;
+	margin-right: -3px;
 }
 .navHome:hover {
 	color: Red;
@@ -193,64 +212,79 @@ header {
 	background-position: 0% 0%;
 }
 .logoEmail {
-	background-image: url(Images/Logos/email.png);
+	background-image: url(Images/Logos/email-logo-white-black.png);
 	display: inline-block;
-	width: 30px;
-	height: 30px;
+	width: 35px;
+	height: 35px;
 	background-repeat: no-repeat;
 	background-size: contain;
 	background-position: 50% 50%;
 }
 .logoSoundcloud {
-	background-image: url(Images/Logos/soundcloud.png);
+	background-image: url(Images/Logos/soundcloud-logo-white-black.png);
 	background-size: contain;
 	background-repeat: no-repeat;
-	width: 46px;
-	height: 30px;
+	width: 53px;
+	height: 46px;
 	display: inline-block;
-	margin-right: 4px;
 	margin-left: 4px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	bottom: -5px;
+	position: relative;
 }
 .logoGoogle {
-	background-image: url(Images/Logos/google.png);
+	background-image: url(Images/Logos/google-logo-white-black.png);
 	background-repeat: no-repeat;
 	background-size: contain;
-	width: 30px;
-	height: 30px;
+	width: 35px;
+	height: 35px;
+	display: inline-block;
+	margin-left: -5px;
+	position: relative;
+	bottom: -1px;
+}
+.logoGithub {
+	background-image: url(Images/Logos/github-logo-white-black.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+	width: 35px;
+	height: 35px;
 	display: inline-block;
 }
 .logoTwitter {
-	background-image: url(Images/Logos/twitter.png);
+	background-image: url(Images/Logos/twitter-logo-white-black.png);
 	background-size: contain;
 	background-repeat: no-repeat;
-	width: 30px;
-	height: 30px;
+	width: 35px;
+	height: 35px;
 	display: inline-block;
 	margin-left: 4px;
 	background-position: 50% 50%;
 }
 .logoFacebook {
-	width: 30px;
-	height: 30px;
+	width: 35px;
+	height: 35px;
 	display: inline-block;
-	background-image: url(Images/Logos/facebook.png);
+	background-image: url(Images/Logos/facebook-logo-white-black.png);
 	background-repeat: no-repeat;
 	background-size: contain;
 	background-position: 50% 50%;
+	margin-left: -3px;
 }
 .logoInstagram {
-	width: 30px;
-	height: 30px;
+	width: 35px;
+	height: 35px;
 	display: inline-block;
-	background-image: url(Images/Logos/instagram.png);
+	background-image: url(Images/Logos/instagram-logo-white-black.png);
 	background-repeat: no-repeat;
 	background-size: contain;
 }
 .logoHome {
-	width: 30px;
-	height: 30px;
+	width: 35px;
+	height: 35px;
 	display: inline-block;
-	background-image: url(Images/jb.png);
+	background-image: url(Images/Logos/jb-logo-white-black.png);
 	background-repeat: no-repeat;
 	background-size: contain;
 }
@@ -313,13 +347,15 @@ h2 {
 	text-align: center;
 	border-bottom-style: solid;
 	border-bottom-width: thin;
+	border-bottom-color: rgba(26,26,26,.3);
 	width: 74%;
-	padding-bottom: 50px;
+	padding-bottom: 35px;
 }
 .block-text-center .sectionContent p {
 	margin-left: 10%;
 	margin-right: 10%;
 	margin-top: 0px;
+	color: rgba(26,26,26,.7);
 }
 
 /*---------------------------------- Banner ------------------------------*/
@@ -357,32 +393,29 @@ h2 {
 }
 
 /*-----------------------------Recent Events-------------------------------*/
-
 .recent-events-wrapper2 {
-	background-repeat: no-repeat;
 	max-width: 1145px;
+	margin: 0 auto;
 	display: block;
 	position: relative;
 }
-.recent-events-wrapper2:before, .recent-events-wrapper2:after {
-	content: "";
-}
-.recent-events-sq-container:before, .recent-events-container:after {
-	content: "";
+#recent-events{
+	margin: 70px auto 33px auto;
 }
 .recent-events-sq-container {
-	width: 25%;
+	max-width: 30%;
+	margin: 0 1.333%;
+	padding: 0;
 	display: inline-block;
-	border: 1px solid black;
-	min-height: 50px;
 }
 .recent-events-sq-1, .recent-events-sq-2, .recent-events-sq-3 {
-	width: 100%;
+	max-width: 100%;
+	-webkit-filter: grayscale(100%);
+	-moz-filter: grayscale(100%);
+	filter: grayscale(100%);
 }
 .recent-events-sq-1 {
-	background-image: url(Images/IU_Logo.jpg);
-	background-repeat: no-repeat;
-	background-size: contain;
+
 }
 .recent-events-sq-2 {
 
@@ -393,7 +426,7 @@ h2 {
 
 
 /*----------- older ------------*/
-.recent-events-wrapper {
+/*.recent-events-wrapper {
 	margin: 0 auto;
 	-webkit-padding-start: 0px;
 	width: auto;
@@ -407,7 +440,7 @@ h2 {
 	padding: 0;
 	margin: 0;
 }
-/*
+
 .recent-events-sq{
 	list-style-type: none;
 	width: 33.333%;
