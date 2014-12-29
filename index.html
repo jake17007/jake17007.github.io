@@ -3,11 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <title>Jacob's Website</title>
+
 <!--The following script tag downloads a font from the Adobe Edge Web Fonts server for use within the web page. We recommend that you do not modify it.--><script>var __adobewebfontsappname__="dreamweaver"</script><script src="http://use.edgefonts.net/just-another-hand:n4:default;source-sans-pro:n2,n3,n9,n4:default;source-serif-pro:n4:default.js" type="text/javascript"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 <link href="Styles.css" rel="stylesheet" type="text/css">
 <meta name="keywords" content="Ryan, design, illustrator, photography">
 <meta name="description" content="This is my first website. I learned how to build it at Lynda.com. Thank god for Lynda! Lynda.. Lynda.. Listen.. Listen Lynda...">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+
 </head>
 
 <body>
@@ -34,10 +37,10 @@
 
 <div id="navRight">
 <ul>
-<li><a href="index.html" title="home page" class="navHome">Home</a></li><li>
-<a href="about.html" title="about page" class="navAbout">About</a></li><li>
-<a href="portfolio.html" title="portfolio page" class="navPortfolio">Portfolio</a></li><li>
-<a href="contact.html" title="contact page" class="navContact">Contact</a></li>
+<li><a href="#homeSection" title="home page" class="navHome smoothScroll">Home</a></li><li>
+<a href="#musicSection" title="Music Section" class="navMusic smoothScroll">Music</a></li><li>
+<a href="#techSection" title="Tech page" class="navTech smoothScroll">Tech</a></li><li>
+<a href="#contactSection" title="contact page" class="navContact smoothScroll">Contact</a></li>
 </ul>
 </div>
 
@@ -47,6 +50,7 @@
 <!------------------------ Banner -------------------------------------->
 
 <header role=banner>
+<a name="homeSection">
 <div class="banner-main-image"><img src="Images/desktop-bkgd-high.jpg" alt="Jake Beauchamp" title="Jacob Beauchamp Background" class="main-image"/>
 </div>
 
@@ -58,36 +62,27 @@
 </p>
 </div>
 </div>
+</a>
 </header>
 
+<!------------------------ Main Content ------------------------------------>
+
 <main role="main" class="mainContent">
-<article role="article">
+
+  <!-------------------- About me -------------------------------->
+
+
 <div class="block-text-center">
+<article role="article">
 <section class="sectionContent">
-  <h1>A brief background</h1>
-  <p>I'm a curious, motivated person with a passion for exploring how art and science intertwine. &nbsp;After diving into the art of music production, I've developed an ever expanding interest in technology - especially that which harmonizes with the music industry. &nbsp;As a current computer science student, I strive to learn about data science and machine intelligence in hopes to live a life that encompasses my passions.</p>
+  <h1>About me</h1>
+  <p>I'm a curious, motivated person with a passion for exploring how art and science intertwine. &nbsp;After diving into the art of music production, I've developed an ever growing interest in technology - especially that which harmonizes with the music industry. &nbsp;As a current computer science student, I strive to learn about data science and machine intelligence in hopes to live a life that encompasses my passions.</p>
 </section>
-</div>
 </article>
 
-<!--<article role="article">
-<div class="block-text-center">
-<section class="sectionContent">
-  <h1>Recent events</h1>
-  <div class="recent-events-wrapper">
-  <ul>
-  <li class="recent-events-sq"><a href="iusb.html" title="Honor role at IUSB" class="recent-events-1"></a></li><li class="recent-events-sq">
-  <a href="tech.html" title="Personal website code on GitHub" class="recent-events-2"></a></li><li class="recent-events-sq">
-  <a href="music.html" title="I called it I Called It song" class="recent-events-3"></a></li>
-  </ul>
-  </div>
-</section>
-</div>
-</article>-->
 
-<div class="block-text-center">
-  <section class="sectionContent">
-    <h1 id="recent-events">Recent events</h1>
+<section class="sectionContent">
+    <h2 id="recent-events">Recent events</h2>
     <div class="recent-events-wrapper2">
       <div class="recent-events-sq-container">
         <a href="underconstruction.html" title="Link to Dean&#39;s List">
@@ -105,10 +100,68 @@
         </a>
       </div>
     </div>
-  </section>
+</section>
 </div>
 
-<footer role="contentinfo">Copyright 2014 by <a href="http://www.google.com" title="home page url of this site" target="_blank">Jacob Beauchamp</a></footer>
+<!-------------------- Music -------------------------------->
 
+<article role="article">
+  <a name="musicSection">
+  <div class="block-text-center">
+    <section class="sectionContent">
+      <h1>Music</h1>
+
+      <h2>Soundcloud</h2>
+      <div class="musicPlayer">
+      <iframe width="100%" height="300" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/93321009&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
+      </div>
+
+      <h2>Mixcloud</h2>
+      <div class="musicPlayer">
+      <iframe width="100%" height="180" src="https://www.mixcloud.com/widget/iframe/?feed=http%3A%2F%2Fwww.mixcloud.com%2FJakeB_music%2F&amp;embed_uuid=0630a299-baae-41bf-abd6-ca5a2315e25f&amp;replace=0&amp;hide_cover=1&amp;light=1&amp;stylecolor=e5e5e5&amp;embed_type=widget_standard&amp;hide_tracklist=1" frameborder="0"></iframe>
+      <div style="clear: both; height: 3px; width: auto;"></div>
+      <p style="display: block; font-size: 11px; font-family: 'Open Sans', Helvetica, Arial, sans-serif; margin: 0px; padding: 3px 4px; color: rgb(153, 153, 153); width: auto;">
+        <a href="http://www.mixcloud.com/JakeB_music/?utm_source=widget&amp;amp;utm_medium=web&amp;amp;utm_campaign=base_links&amp;amp;utm_term=resource_link" target="_blank" style="color: rgba(26,26,26,.4); font-weight: bold;">Cloudcasts by JakeB_music</a>
+        <span> on </span>
+        <a href="http://www.mixcloud.com/?utm_source=widget&amp;utm_medium=web&amp;utm_campaign=base_links&amp;utm_term=homepage_link" target="_blank" style="color: rgba(26,26,26,.4); font-weight: bold;"> Mixcloud</a>
+        </p>
+        <div style="clear: both; height: 3px; width: auto;"></div>
+    </div>
+    </section>
+    </a>
+  </div>
+</article>
+
+<!-------------------- Tech -------------------------------->
+
+<article role="article">
+  <div class="block-text-center">
+    <a name="techSection">
+      <section class="sectionContent">
+        <h1>Tech</h1>
+        <p></p>
+      </section>
+    </a>
+  </div>
+</article>
+
+<!-------------------- Contact -------------------------------->
+
+<article role="article">
+  <div class="block-text-center">
+    <a name="contactSection">
+      <section class="sectionContent">
+        <h1>Contact</h1>
+        <p></p>
+      </section>
+    </a>
+  </div>
+</article>
+
+<!-------------------- Footer -------------------------------->
+
+<footer role="contentinfo">Created by <a href="http://www.google.com" title="home page url of this site" target="_blank">Jacob Beauchamp</a></footer>
+
+<script type="text/javascript" src="Javascript/smoothscroll.js"></script>
 </body>
 </html>
