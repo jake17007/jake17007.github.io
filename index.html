@@ -6,7 +6,13 @@
 
 <!--The following script tag downloads a font from the Adobe Edge Web Fonts server for use within the web page. We recommend that you do not modify it.--><script>var __adobewebfontsappname__="dreamweaver"</script><script src="http://use.edgefonts.net/just-another-hand:n4:default;source-sans-pro:n2,n3,n9,n4:default;source-serif-pro:n4:default.js" type="text/javascript"></script>
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+
+
+
+
 <link href="Styles.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="Javascript/classie.js"></script>
+<script type="text/javascript" src="Javascript/shrink.js"></script>
 <meta name="keywords" content="Ryan, design, illustrator, photography">
 <meta name="description" content="This is my first website. I learned how to build it at Lynda.com. Thank god for Lynda! Lynda.. Lynda.. Listen.. Listen Lynda...">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -35,9 +41,15 @@
 </ul>
 </div>
 
+    <a href="#homeSection" title="top of page" class="smoothScroll">
+    <img src="Images/jakebeauchamp2.png" alt="Jacob Beauchamp" title="Jacob Beauchamp" id="sigImg"/>
+    </a>
+
+<!--width of signature should be 500px and height should be 186 when enlarged-->
+
 <div id="navRight">
 <ul>
-<li><a href="#homeSection" title="home page" class="navHome smoothScroll">Home</a></li><li>
+<li><a href="#aboutSection" title="About Section" class="navAbout smoothScroll">About</a></li><li>
 <a href="#musicSection" title="Music Section" class="navMusic smoothScroll">Music</a></li><li>
 <a href="#techSection" title="Tech page" class="navTech smoothScroll">Tech</a></li><li>
 <a href="#contactSection" title="contact page" class="navContact smoothScroll">Contact</a></li>
@@ -53,17 +65,6 @@
 <a name="homeSection">
 <div class="banner-main-image"><img src="Images/desktop-bkgd-high.jpg" alt="Jake Beauchamp" title="Jacob Beauchamp Background" class="main-image"/>
 </div>
-
-<div class="banner-middle-wrapper">
-<section class="nameLogo"><img src="Images/jakebeauchamp.png" alt="Jacob Beauchamp" width="500" height="186" title="Jacob Beauchamp"/>
-</section>
-<div class="twoButtons">
-<p>
-  <a href="#musicSection" class="buttonMusic smoothScroll">Music.</a>
-  <a href="#techSection" class="buttonMusic smoothScroll">Tech.</a>
-</p>
-</div>
-</div>
 </a>
 </header>
 
@@ -75,6 +76,7 @@
 
 
 <div class="block-text-center">
+<a name="aboutSection">
 <article role="article">
 <section class="sectionContent">
   <h1>About me</h1>
@@ -103,6 +105,7 @@
       </div>
     </div>
 </section>
+</a>
 </div>
 
 <!-------------------- Music -------------------------------->
@@ -164,6 +167,9 @@
 
 <footer role="contentinfo">Created by <a href="http://www.google.com" title="home page url of this site" target="_blank">Jacob Beauchamp</a></footer>
 
+
+
 <script type="text/javascript" src="Javascript/smoothscroll.js"></script>
+
 </body>
 </html>

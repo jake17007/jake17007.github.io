@@ -73,7 +73,7 @@ li {
 }
 #navLeft {
 	float: left;
-	width: 50%;
+	width: 40%;
 	z-index: 100;
 	display: block;
 }
@@ -85,7 +85,7 @@ li {
 }
 #navRight {
 	float: right;
-	width: 50%;
+	width: 40%;
 	margin: 0;
 	display: block;
 	padding-top: 4px;
@@ -94,6 +94,7 @@ li {
 #navRight ul {
 	text-align: right;
 	float: right;
+	display: block;
 	-webkit-padding-start: 0px;
 }
 nav a {
@@ -102,8 +103,8 @@ nav a {
 	text-shadow: 0px 0px;
 	font-weight: 400;
 }
-.navHome {
-	background-image: url(Images/Line-scribbles/Home.png);
+.navAbout {
+	background-image: url(Images/Line-scribbles/Home2.png);
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
 	-webkit-transition: all .5s ease 0s;
@@ -121,7 +122,7 @@ nav a {
 	margin-right: -3px;
 }
 .navMusic {
-	background-image: url(Images/Line-scribbles/About.png);
+	background-image: url(Images/Line-scribbles/About2.png);
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
 	-webkit-transition: all .5s ease 0s;
@@ -136,7 +137,7 @@ nav a {
 	margin-right: -1px;
 }
 .navTech {
-	background-image: url(Images/Line-scribbles/Portfolio.png);
+	background-image: url(Images/Line-scribbles/Portfolio2.png);
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
 	-webkit-transition: all .5s ease 0s;
@@ -151,7 +152,7 @@ nav a {
 	margin-right: -2px;
 }
 .navContact {
-	background-image: url(Images/Line-scribbles/Contact.png);
+	background-image: url(Images/Line-scribbles/Contact2.png);
 	background-size: 100% 100%;
 	-webkit-transition: all .5s ease 0s;
 	-o-transition: all .5s ease 0s;
@@ -178,10 +179,174 @@ nav a {
 .navContact:hover {
 	color: Red;
 }
+.logoEmail {
+	background-image: url(Images/Logos/email-logo-white-black3.png);
+	display: inline-block;
+	width: 35px;
+	height: 35px;
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: 50% 50%;
+}
+.logoSoundcloud {
+	background-image: url(Images/Logos/soundcloud-logo-white-black2.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+	width: 53px;
+	height: 46px;
+	display: inline-block;
+	margin-left: 4px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	bottom: -5px;
+	position: relative;
+}
+.logoGoogle {
+	background-image: url(Images/Logos/google-logo-white-black2.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+	width: 35px;
+	height: 35px;
+	display: inline-block;
+	margin-left: -5px;
+	position: relative;
+	bottom: -1px;
+}
+.logoGithub {
+	background-image: url(Images/Logos/github-logo-white-black2.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+	width: 35px;
+	height: 35px;
+	display: inline-block;
+}
+.logoTwitter {
+	background-image: url(Images/Logos/twitter-logo-white-black2.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+	width: 35px;
+	height: 35px;
+	display: inline-block;
+	margin-left: 4px;
+	background-position: 50% 50%;
+}
+.logoFacebook {
+	width: 35px;
+	height: 35px;
+	display: inline-block;
+	background-image: url(Images/Logos/facebook-logo-white-black2.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: 50% 50%;
+	margin-left: -3px;
+}
+.logoInstagram {
+	width: 35px;
+	height: 35px;
+	display: inline-block;
+	background-image: url(Images/Logos/instagram-logo-white-black3.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+.logoHome {
+	width: 35px;
+	height: 35px;
+	display: inline-block;
+	background-image: url(Images/Logos/jb-logo-white-black3.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+/*
+BIG SIGNATURE (remove this comment!!!)
+.nameLogo {
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+	text-align: center;
+	width: 100%;
+	border-left-color: #FFFFFF;
+	border-right-color: #FFFFFF;
+	position: fixed;
+	max-width: 1030.5px;
+	padding-left: 2px;
+	padding-top: 0px;
+	background-position: 0% 0%;
+}
+*/
 
-header {
+/*
+BIG SIGNATURE (remove this comment!!!)
+.banner-middle-wrapper {
+position: absolute;
+z-index: 96;
+top: 184px;
+margin-left: auto;
+margin-right: auto;
+display: block;
+width: 100%;
+max-width: 1145px;
+}
+
+.banner-middle-wrapper {
+	position: absolute;
+	z-index: 96;
+	top: 0px;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+	width: 20%;
+	max-width: 1145px;
+}
+.nameLogo {
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+	text-align: center;
+	width: auto;
+	border-left-color: #FFFFFF;
+	border-right-color: #FFFFFF;
+	position: fixed;
+	padding-left: 2px;
+	padding-top: 0px;
 
 }
+.sigImg {
+	width: 100%;
+}
+*/
+
+
+/*-----big-----*/
+
+img#sigImg {
+width: 50%;
+position: absolute;
+top: 157px;
+right: 25%;
+-webkit-transition: all 0.5s;
+-moz-transition: all 0.5s;
+-o-transition: all 0.5s;
+transition: all 0.5s;
+
+}
+
+/*-----small-----*/
+
+img.smaller#sigImg {
+	width: 10%;
+	position: absolute;
+	right: 45%;
+	top: 0px;
+
+}
+
+
+
+
+
+
+/*---------------------------------- Banner ------------------------------*/
+/*
 .buttonMusic {
 	padding-right: 6px;
 	padding-bottom: 6px;
@@ -196,97 +361,25 @@ header {
 	font-weight: 500;
 	border: 1px solid #FFFFFF;
 	padding-top: 4px;
-}
-.nameLogo {
+}*/
+
+.banner-main-image {
+	background-repeat: no-repeat;
+	max-width: 1145px;
 	display: block;
-	margin-right: auto;
-	margin-left: auto;
-	text-align: center;
+	position: relative;
+	z-index: 90;
+}
+
+.banner-wrapper {
+	min-height: 320px;
+	display: block;
+	position: relative;
 	width: 100%;
-	border-left-color: #FFFFFF;
-	border-right-color: #FFFFFF;
-	position: relative;
-	max-width: 1030.5px;
-	padding-left: 2px;
-	padding-top: 0px;
-	background-position: 0% 0%;
 }
-.logoEmail {
-	background-image: url(Images/Logos/email-logo-white-black.png);
-	display: inline-block;
-	width: 35px;
-	height: 35px;
-	background-repeat: no-repeat;
-	background-size: contain;
-	background-position: 50% 50%;
-}
-.logoSoundcloud {
-	background-image: url(Images/Logos/soundcloud-logo-white-black.png);
-	background-size: contain;
-	background-repeat: no-repeat;
-	width: 53px;
-	height: 46px;
-	display: inline-block;
-	margin-left: 4px;
-	padding-top: 0px;
-	padding-bottom: 0px;
-	bottom: -5px;
-	position: relative;
-}
-.logoGoogle {
-	background-image: url(Images/Logos/google-logo-white-black.png);
-	background-repeat: no-repeat;
-	background-size: contain;
-	width: 35px;
-	height: 35px;
-	display: inline-block;
-	margin-left: -5px;
-	position: relative;
-	bottom: -1px;
-}
-.logoGithub {
-	background-image: url(Images/Logos/github-logo-white-black.png);
-	background-repeat: no-repeat;
-	background-size: contain;
-	width: 35px;
-	height: 35px;
-	display: inline-block;
-}
-.logoTwitter {
-	background-image: url(Images/Logos/twitter-logo-white-black.png);
-	background-size: contain;
-	background-repeat: no-repeat;
-	width: 35px;
-	height: 35px;
-	display: inline-block;
-	margin-left: 4px;
-	background-position: 50% 50%;
-}
-.logoFacebook {
-	width: 35px;
-	height: 35px;
-	display: inline-block;
-	background-image: url(Images/Logos/facebook-logo-white-black.png);
-	background-repeat: no-repeat;
-	background-size: contain;
-	background-position: 50% 50%;
-	margin-left: -3px;
-}
-.logoInstagram {
-	width: 35px;
-	height: 35px;
-	display: inline-block;
-	background-image: url(Images/Logos/instagram-logo-white-black.png);
-	background-repeat: no-repeat;
-	background-size: contain;
-}
-.logoHome {
-	width: 35px;
-	height: 35px;
-	display: inline-block;
-	background-image: url(Images/Logos/jb-logo-white-black.png);
-	background-repeat: no-repeat;
-	background-size: contain;
+.main-image {
+	max-width: 1145px;
+	width: 100%
 }
 
 /*------------------------------- Main Content ---------------------------*/
@@ -359,41 +452,8 @@ h2 {
 	color: rgba(26,26,26,.7);
 }
 
-/*---------------------------------- Banner ------------------------------*/
-
-.banner-main-image {
-	background-repeat: no-repeat;
-	max-width: 1145px;
-	display: block;
-	position: relative;
-	z-index: 90;
-}
-
-.banner-wrapper {
-	min-height: 320px;
-	display: block;
-	position: relative;
-	width: 100%;
-}
-.twoButtons {
-	text-align: center;
-}
-.main-image {
-	max-width: 1145px;
-	width: 100%
-}
-.banner-middle-wrapper {
-	position: absolute;
-	z-index: 96;
-	top: 184px;
-	margin-left: auto;
-	margin-right: auto;
-	display: block;
-	width: 100%;
-	max-width: 1145px;
-}
-
 /*-----------------------------Recent Events-------------------------------*/
+
 .recent-events-wrapper2 {
 	max-width: 1145px;
 	margin: 0 auto;
