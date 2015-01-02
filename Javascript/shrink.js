@@ -3,7 +3,7 @@ function init() {
   window.addEventListener('scroll', function(e){
 
     var distanceY = window.pageYOffset || document.documentElement.scrollTop,
-    shrinkOn = 400,
+    shrinkOn = 15,
     img = document.querySelector("#sigImg");
     //img = document.getElementById("sigImg");
 

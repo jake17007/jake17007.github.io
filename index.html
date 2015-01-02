@@ -6,10 +6,6 @@
 
 <!--The following script tag downloads a font from the Adobe Edge Web Fonts server for use within the web page. We recommend that you do not modify it.--><script>var __adobewebfontsappname__="dreamweaver"</script><script src="http://use.edgefonts.net/just-another-hand:n4:default;source-sans-pro:n2,n3,n9,n4:default;source-serif-pro:n4:default.js" type="text/javascript"></script>
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-
-
-
-
 <link href="Styles.css" rel="stylesheet" type="text/css">
 <script type="text/javascript" src="Javascript/classie.js"></script>
 <script type="text/javascript" src="Javascript/shrink.js"></script>
@@ -21,12 +17,12 @@
 
 <body>
 
-
-
-<!--------------------------- Nav -------------------------------------->
+<!------------------------------ Nav ---------------------------------------->
 
 <div id="nav-wrapper">
 <nav id="nav-top" role="navigation">
+
+<!--Left Social Media-->
 
 <div id="navLeft">
 <ul>
@@ -41,17 +37,19 @@
 </ul>
 </div>
 
-    <a href="#homeSection" title="top of page" class="smoothScroll">
-    <img src="Images/jakebeauchamp2.png" alt="Jacob Beauchamp" title="Jacob Beauchamp" id="sigImg"/>
-    </a>
+<!--Middle Name Signature-->
 
-<!--width of signature should be 500px and height should be 186 when enlarged-->
+<a href="#homeSection" title="top of page" class="smoothScroll">
+    <img src="Images/jakebeauchamp2.png" alt="Jacob Beauchamp" title="Jacob Beauchamp" id="sigImg"/>
+</a>
+
+<!--Right Navigation Menu-->
 
 <div id="navRight">
 <ul>
 <li><a href="#aboutSection" title="About Section" class="navAbout smoothScroll">About</a></li><li>
-<a href="#musicSection" title="Music Section" class="navMusic smoothScroll">Music</a></li><li>
 <a href="#techSection" title="Tech page" class="navTech smoothScroll">Tech</a></li><li>
+<a href="#musicSection" title="Music Section" class="navMusic smoothScroll">Music</a></li><li>
 <a href="#contactSection" title="contact page" class="navContact smoothScroll">Contact</a></li>
 </ul>
 </div>
@@ -59,7 +57,7 @@
 </nav>
 </div>
 
-<!------------------------ Banner -------------------------------------->
+<!------------------------ Banner ------------------------------------------>
 
 <header role=banner>
 <a name="homeSection">
@@ -72,7 +70,7 @@
 
 <main role="main" class="mainContent">
 
-  <!-------------------- About me -------------------------------->
+<!-------------- About me -------------->
 
 
 <div class="block-text-center">
@@ -108,64 +106,114 @@
 </a>
 </div>
 
-<!-------------------- Music -------------------------------->
+<!------------ Tech -------------->
 
-<article role="article">
-  <a name="musicSection">
-  <div class="block-text-center">
+<div class="block-text-center">
+  <a name="techSection">
+    <section class="sectionContent">
+      <h1>Tech</h1>
+      <div class="techContent">
+        <div class="languages">
+          <h2>Languages I've Used</h2>
+          <h3 class="subText">(In descending order of familiarity)</h3>
+          <div class="orderedListContainer">
+            <div class="techContainerLeft">
+              <ol>
+                <li>Visual Basic .NET</li>
+                <li>HTML5</li>
+                <li>CSS3</li>
+                <li>GIT</li>
+              </ol>
+            </div>
+            <div class="techContainerRight">
+              <ol start="5">
+                <li>Javascript</li>
+                <li>Node.js</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+        <div class="software">
+          <h2>Software I've Used</h2>
+          <h3 class="subText">(In descending order of familiarity)</h3>
+          <div class="orderedListContainer">
+            <div class="techContainerLeft">
+              <ol>
+                <li>Logic Pro X</li>
+                <li>Photoshop CC</li>
+                <li>Microsoft Office</li>
+                <li>Visual Studio 2012</li>
+              </ol>
+            </div>
+            <div class="techContainerRight">
+              <ol start="5">
+                <li>Ableton Live 8</li>
+                <li>Atom Text Editor</li>
+                <li>Chrome Dev Tools</li>
+                <li>Terminal</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </a>
+</div>
+
+<!------------ Music ---------------->
+
+<a name="musicSection">
+<div class="block-text-center musicWrapper">
+
     <section class="sectionContent">
       <h1>Music</h1>
 
-      <h2>Soundcloud</h2>
+      <h2>
+      <a href="http://soundcloud.com/jakebofficial" target="_blank" title="Link to Jake&#39;s Soundcloud Page">Soundcloud</a>
+      </h2>
       <div class="musicPlayer">
-      <iframe width="100%" height="300" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/93321009&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
+        <iframe width="100%" height="300" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/93321009&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
       </div>
 
-      <h2>Mixcloud</h2>
+      <h2>
+      <a href="http://www.mixcloud.com/JakeB_music/" target="_blank" title="Link to Jake&#39;s Mixcloud Page">Mixcloud</a>
+      </h2>
       <div class="musicPlayer">
-      <iframe width="100%" height="180" src="https://www.mixcloud.com/widget/iframe/?feed=http%3A%2F%2Fwww.mixcloud.com%2FJakeB_music%2F&amp;embed_uuid=0630a299-baae-41bf-abd6-ca5a2315e25f&amp;replace=0&amp;hide_cover=1&amp;light=1&amp;stylecolor=e5e5e5&amp;embed_type=widget_standard&amp;hide_tracklist=1" frameborder="0"></iframe>
-      <div style="clear: both; height: 3px; width: auto;"></div>
-      <p style="display: block; font-size: 11px; font-family: 'Open Sans', Helvetica, Arial, sans-serif; margin: 0px; padding: 3px 4px; color: rgb(153, 153, 153); width: auto;">
-        <a href="http://www.mixcloud.com/JakeB_music/?utm_source=widget&amp;amp;utm_medium=web&amp;amp;utm_campaign=base_links&amp;amp;utm_term=resource_link" target="_blank" style="color: rgba(26,26,26,.4); font-weight: bold;">Cloudcasts by JakeB_music</a>
-        <span> on </span>
-        <a href="http://www.mixcloud.com/?utm_source=widget&amp;utm_medium=web&amp;utm_campaign=base_links&amp;utm_term=homepage_link" target="_blank" style="color: rgba(26,26,26,.4); font-weight: bold;"> Mixcloud</a>
+        <iframe width="100%" height="180" src="https://www.mixcloud.com/widget/iframe/?feed=http%3A%2F%2Fwww.mixcloud.com%2FJakeB_music%2F&amp;embed_uuid=0630a299-baae-41bf-abd6-ca5a2315e25f&amp;replace=0&amp;hide_cover=1&amp;light=1&amp;stylecolor=e5e5e5&amp;embed_type=widget_standard&amp;hide_tracklist=1" frameborder="0"></iframe>
+        <div style="clear: both; height: 3px; width: auto;"></div>
+        <p style="display: block; font-size: 11px; font-family: 'Open Sans', Helvetica, Arial, sans-serif; margin: 0px; padding: 3px 4px; color: rgb(153, 153, 153); width: auto;">
+          <a href="http://www.mixcloud.com/JakeB_music/?utm_source=widget&amp;amp;utm_medium=web&amp;amp;utm_campaign=base_links&amp;amp;utm_term=resource_link" target="_blank" style="color: rgba(26,26,26,.4); font-weight: bold;">Cloudcasts by JakeB_music</a>
+          <span> on </span>
+          <a href="http://www.mixcloud.com/?utm_source=widget&amp;utm_medium=web&amp;utm_campaign=base_links&amp;utm_term=homepage_link" target="_blank" style="color: rgba(26,26,26,.4); font-weight: bold;"> Mixcloud</a>
         </p>
         <div style="clear: both; height: 3px; width: auto;"></div>
-    </div>
+      </div>
     </section>
-    </a>
-  </div>
-</article>
 
-<!-------------------- Tech -------------------------------->
+</div>
+</a>
 
-<article role="article">
-  <div class="block-text-center">
-    <a name="techSection">
-      <section class="sectionContent">
-        <h1>Tech</h1>
-        <p></p>
-      </section>
-    </a>
-  </div>
-</article>
+<!---------- Contact -------------->
 
-<!-------------------- Contact -------------------------------->
 
-<article role="article">
-  <div class="block-text-center">
-    <a name="contactSection">
-      <section class="sectionContent">
-        <h1>Contact</h1>
-        <p></p>
-      </section>
-    </a>
-  </div>
-</article>
+<div class="block-text-center">
+  <a name="contactSection">
+    <section class="sectionContent">
+      <h1>Contact</h1>
+      <div class="contact-us-container">
+        <a href="mailto:jacob.beauchamp@me.com" title="Say Hello Link">
+          <img src="Images/Logos/email-logo-white-black3.png" alt="Email Jacob" title="Say Hello"/>
+        </a>
+      </div>
+      <p></p>
+    </section>
+  </a>
+</div>
 
-<!-------------------- Footer -------------------------------->
 
-<footer role="contentinfo">Created by <a href="http://www.google.com" title="home page url of this site" target="_blank">Jacob Beauchamp</a></footer>
+<!------------------------------ Footer ------------------------------------>
+
+<footer role="contentinfo">Site Created by <a href="http://www.google.com" title="home page url of this site" target="_blank">Jacob Beauchamp</a></footer>
 
 
 
