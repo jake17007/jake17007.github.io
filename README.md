@@ -1,4 +1,6 @@
 jake17007.github.io
 ===================
 
-Repository for hosting website
+# This is my personal website!
+
+ It's not done yet, but you can [check it out](http://jacobbeauchamp.com)!

@@ -1,0 +1,125 @@
+Create new EC2 instance:
+(ubuntu)
+
+On security form page, create a new security form and enable it with SSH and HTTP.
+
+Create a new keypair.
+
+save it its own directory.
+
+In terminal run:
+
+$chmod 400 [keypair-name].pem
+
+to give permissions to make the keypair readable and writable to us (you).
+
+Run:
+
+$ssh -i [keypair-name].pem ubuntu@[Public IP or Public DNS]
+
+to ssh in to the virtual machine.
+(Public IP and Public DNS can be found on aws.com under instances.)
+
+----------------------
+
+To update the virtual machine:
+
+While ssh'ed in to the ec2 instance, run:
+
+$sudo apt-get update
+
+----------------------
+
+To install PHP, Apache, and MySQL:
+
+While ssh'ed in to the ec2 instance, run:
+
+$sudo apt-get install
+
+...then...
+
+$...apache2
+(this is a web server)
+$...libapache2-mod-php5
+(this is to make php5 compatible with apache2)
+$...mysql-server
+(this is a server database)
+$...php5-mysql
+(this is to make php5 compatible with apache2)
+$...php5
+(this is the php5 scripting language)
+
+(Full command: $sudo apt-get install apache2 libapache2-mod-php5 mysql-server php5-mysql php5)
+
+Hit Y for yes
+
+Enter a new password for MySQL
+
+---------------------
+
+If Apache is not working properly:
+
+While ssh'ed in to the ec2 instance, run:
+
+$sudo service apache2 restart
+
+---------------------
+
+Now install MySQL Secure by running:
+
+$ mysql_secure_installation
+
+Enter the current password.
+
+Then press Y to change the root password.
+
+Then enter a new password (can be the same one).
+
+Press Y to remove anonymous users.
+
+Press Y to disallow root login remotely.
+
+Press Y to remove test database and access to it.
+
+Press Y to reload privelage tables now.
+
+(now you might want to restart Apache2 again)
+
+---------------------
+
+To login to MySQL:
+
+Run:
+
+$mysql -u root -p
+
+To exit run:
+
+$exit
+
+---------------------
+
+If you want to install PHP My Admin GUI
+
+Run:
+
+$sudo apt-get install phpmyadmin
+
+---------------------
+
+To upload files onto the Public DNS of the ec2 instance:
+
+Copy the Public DNS link (found on aws.com under instances).
+Navigate in terminal to the root folder by running:
+
+$cd ~
+OR
+$cd /
+OR
+$cd ../
+
+(idk which one but it's either the home directory or the root directory)
+
+Then navigate to: "var/www" by running:
+
+$cd var/www
