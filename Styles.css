@@ -223,57 +223,48 @@ nav a {
 .logoEmail {
 	background-image: url(Images/Logos/email.png);
 	display: inline-block;
-	width: 29px;
+	width: 34px;
 	height: 29px;
 	background-repeat: no-repeat;
 	background-size: contain;
 	background-position: 50% 50%;
+	margin-bottom: 2px;
 }
 .logoSoundcloud {
 	background-image: url(Images/Logos/soundcloud.png);
 	background-size: contain;
 	background-repeat: no-repeat;
-	width: 44px;
+	width: 46px;
 	height: 40px;
 	display: inline-block;
-	margin-left: 5px;
+	margin-left: 6px;
 	padding-top: 0px;
 	padding-bottom: 0px;
 	bottom: -16px;
 	position: relative;
-	margin-bottom: 2px;
-}
-.logoGoogle {
-	background-image: url(Images/Logos/google.png);
-	background-repeat: no-repeat;
-	background-size: contain;
-	width: 25px;
-	height: 25px;
-	display: inline-block;
-	margin-left: 5px;
-	position: relative;
-	bottom: -1px;
-	margin-bottom: 2px;
+	margin-bottom: 5px;
 }
 .logoGithub {
 	background-image: url(Images/Logos/github.png);
 	background-repeat: no-repeat;
 	background-size: contain;
-	width: 27px;
-	height: 27px;
+	width: 31px;
+	height: 29px;
 	display: inline-block;
-	margin-left: 1px;
+	margin-left: 3px;
 	margin-top: 0px;
 	padding-top: 0px;
+	padding-bottom: 0px;
+	margin-bottom: 0px;
 }
 .logoTwitter {
 	background-image: url(Images/Logos/twitter.png);
 	background-size: contain;
 	background-repeat: no-repeat;
-	width: 28px;
+	width: 31px;
 	height: 28px;
 	display: inline-block;
-	margin-left: 4px;
+	margin-left: 3px;
 	background-position: 50% 50%;
 	padding-top: 3px;
 }
@@ -306,6 +297,7 @@ nav a {
 	background-image: url(Images/Logos/jb.png);
 	background-repeat: no-repeat;
 	background-size: contain;
+	margin-bottom: 3px;
 }
 
 /*-----Big Signature-----*/
