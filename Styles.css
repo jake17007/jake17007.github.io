@@ -66,9 +66,10 @@ nav li {
 	padding: 0;
 	margin: 0;
 }
-li {
-	list-style-type: decimal;
+ol {
+	list-style-type: none; !important
 }
+
 
 /*---------------------------------- Nav --------------------------------*/
 
@@ -555,10 +556,10 @@ button:hover {
 	float: right;
 	width: 50%;
 	margin: 0 auto;
-
 }
-ol {
-	text-align: center;
+.list-num {
+	font-size: small;
+	color: rgba(26,26,26, .6);
 }
 
 /*----------------------------------Music----------------------------------*/
