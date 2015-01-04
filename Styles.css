@@ -482,23 +482,13 @@ h2 {
 	max-width: 100%;
 }
 
-/*----------------------------------Music----------------------------------*/
-
-.musicPlayer {
-	width: 75%;
-	margin: 0 auto;
-	border: thin solid rgba(26,26,26,.4);
-}
-.musicWrapper {
-	margin-top: 30px;
-}
-
 /*----------------------------------Tech----------------------------------*/
+
 .techContent {
 	overflow: auto;
 }
 
-.techContent button {
+button {
 	cursor: pointer;
 	background: rgba(26,26,26, .9);
 	padding: 10px;
@@ -511,7 +501,7 @@ h2 {
 	text-indent: 0px;
 	text-shadow: none;
 }
-.techContent button:hover {
+button:hover {
 	background: rgba(26,26,26, .6);
 	-webkit-transition:background 0.3s ease-in-out;
 	-moz-transition:background 0.3s ease-in-out;
@@ -569,6 +559,24 @@ h2 {
 }
 ol {
 	text-align: center;
+}
+
+/*----------------------------------Music----------------------------------*/
+
+.musicPlayer {
+	width: 75%;
+	margin: 0 auto;
+	border: thin solid rgba(26,26,26,.4);
+}
+.musicWrapper {
+	margin-top: 30px;
+}
+.music-button-soundcloud button {
+	margin: 30px auto 30px auto;
+}
+.music-button-mixcloud button {
+	margin: 30px auto 0px auto;
+	min-width: 178px;
 }
 
 /*--------------------------------Contact---------------------------------*/
