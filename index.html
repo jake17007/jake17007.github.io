@@ -9,6 +9,7 @@
 <link href="Styles.css" rel="stylesheet" type="text/css">
 <script type="text/javascript" src="Javascript/classie.js"></script>
 <script type="text/javascript" src="Javascript/shrink.js"></script>
+
 <meta name="keywords" content="Ryan, design, illustrator, photography">
 <meta name="description" content="This is my first website. I learned how to build it at Lynda.com. Thank god for Lynda! Lynda.. Lynda.. Listen.. Listen Lynda...">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -26,13 +27,13 @@
 
 <div id="navLeft">
 <ul>
-<li><a href="#homeSection" title="Top of Home Page" class="logoHome smoothScroll"></a></li><li>
-    <a href="#contactSection" title="Contact" class="logoEmail smoothScroll"></a></li><li>
-    <a href="https://soundcloud.com/jakebofficial" title="Jacob's Soundcloud Page"target="_blank" class="logoSoundcloud"></a></li><li>
-    <a href="https://github.com/jake17007" target="_blank" title="Jacob's GitHub Page" class="logoGithub"></a></li><li>
-    <a href="https://twitter.com/Jacob_B219" title="Jacob's Twitter Page" target="_blank" class="logoTwitter"></a></li><li>
-    <a href="https://www.facebook.com/jacob.beauchamp.7" title="Jacob's Facebook Page" target="_blank" class="logoFacebook"></a></li><li>
-    <a href="http://instagram.com/jacobbeauchamp/" title="Jacob's Instagram Page" target="_blank" class="logoInstagram"></a></li>
+<li><a href="#homeSection" title="Top of Page" class="logoHome smoothScroll" id="jb-logo-nav"></a></li><li>
+    <a href="#contactSection" title="Contact" class="logoEmail smoothScroll" id="contact-logo-nav"></a></li><li>
+    <a href="https://soundcloud.com/jakebofficial" title="Jacob's Soundcloud"target="_blank" class="logoSoundcloud" id="soundcloud-logo-nav"></a></li><li>
+    <a href="https://github.com/jake17007" target="_blank" title="Jacob's GitHub Page" class="logoGithub" id="github-logo-nav"></a></li><li>
+    <a href="https://twitter.com/Jacob_B219" title="Jacob's Twitter" target="_blank" class="logoTwitter" id="twitter-logo-nav"></a></li><li>
+    <a href="https://www.facebook.com/jacob.beauchamp.7" title="Jacob's Facebook" target="_blank" class="logoFacebook" id="facebook-logo-nav"></a></li><li>
+    <a href="http://instagram.com/jacobbeauchamp/" title="Jacob's Instagram" target="_blank" class="logoInstagram" id="instagram-logo-nav"></a></li>
 </ul>
 </div>
 
@@ -46,10 +47,10 @@
 
 <div id="navRight">
 <ul>
-<li><a href="#aboutSection" title="About Section" class="navAbout smoothScroll">ABOUT</a></li><li>
-<a href="#techSection" title="Tech page" class="navTech smoothScroll">TECH</a></li><li>
-<a href="#musicSection" title="Music Section" class="navMusic smoothScroll">MUSIC</a></li><li>
-<a href="#contactSection" title="contact page" class="navContact smoothScroll">CONTACT</a></li>
+<li><a href="#aboutSection" title="About" class="navAbout smoothScroll" id="navAboutId">ABOUT</a></li><li>
+<a href="#techSection" title="Tech" class="navTech smoothScroll" id="navTechId">TECH</a></li><li>
+<a href="#musicSection" title="Music" class="navMusic smoothScroll" id="navMusicId">MUSIC</a></li><li>
+<a href="#contactSection" title="Contact" class="navContact smoothScroll" id="navContactId">CONTACT</a></li>
 </ul>
 </div>
 
@@ -61,7 +62,7 @@
 
 <header role=banner>
 <a name="homeSection">
-<div class="banner-main-image"><img src="Images/desktop-bkgd-high.jpg" alt="Jake Beauchamp" title="Jacob Beauchamp Background" class="main-image"/>
+<div class="banner-main-image"><img src="Images/desktop-bkgd-high.jpg" alt="Jake Beauchamp" title="Jacob Beauchamp" class="main-image"/>
 </div>
 </a>
 </header>
@@ -367,6 +368,9 @@
   <div class="upper-footer">
   </div>
   <div class="lower-footer">
+    <div class="footer-logo-wrapper">
+      <img src="Images/Logos/jb.png" alt="JB Logo" title="JB Logo" class="footer-logo"/>
+    </div>
     Site Created by <a href="http://www.google.com" title="home page url of this site" target="_blank">Jacob Beauchamp</a>
   </div>
 </footer>
@@ -375,5 +379,6 @@
 
 <script type="text/javascript" src="Javascript/smoothscroll.js"></script>
 <script type="text/javascript" src="javascript/form.js"></script>
+<script type="text/javascript" src="javascript/nav-hover.js"></script>
 </body>
 </html>
