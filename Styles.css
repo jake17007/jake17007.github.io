@@ -18,7 +18,13 @@ ul {
 	margin: 0;
 	padding: 0;
 }
-footer {
+.upper-footer {
+	background-color: rgba(26,26,26,.9);
+	width: 100%;
+	max-width: 1145px;
+	height: 70px;
+}
+.lower-footer {
 	background-color: #000000;
 	color: #FFFFFF;
 	font-weight: 600;
@@ -29,10 +35,7 @@ footer {
 	margin-right: auto;
 	margin-bottom: 0;
 	margin-left: auto;
-	padding-top: 109px;
-	padding-right: 10px;
-	padding-bottom: 109px;
-	padding-left: 10px;
+	padding: 74px 10px;
 	clear: both;
 }
 footer a {
@@ -68,6 +71,9 @@ nav li {
 }
 ol {
 	list-style-type: none; !important
+}
+.tech-list {
+	-webkit-padding-start: 0px;
 }
 
 
@@ -488,6 +494,16 @@ h2 {
 .techContent {
 	overflow: auto;
 }
+.tech-article {
+	margin-bottom: 30px;
+}
+.tech-link {
+	text-decoration: none;
+	color: rgba(26,26,26, 1);
+}
+.tech-link:hover {
+	text-decoration: underline;
+}
 
 button {
 	cursor: pointer;
@@ -512,14 +528,14 @@ button:hover {
 	box-shadow:inset 0 1px 3px rgba(0,0,0,0.5);
 }
 .techContainerLeft {
-	width: 50%;
+	width: 45%;
 	float: left;
 	margin: 0 auto;
 
 }
 .techContainerRight {
 	float: right;
-	width: 50%;
+	width: 55%;
 	margin: 0 auto;
 }
 .my-github {
@@ -703,6 +719,9 @@ body {
 }
 :-ms-input-placeholder {
 	color:#888;
+}
+.block-text-center#contact-section-id {
+	border-bottom: none;
 }
 
 /*----------------------------------Other---------------------------------*/
