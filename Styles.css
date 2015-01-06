@@ -517,10 +517,10 @@ h2 {
 }
 #a-little-bit {
 	height: 20px;
-	visibility: hidden;
+	display: none;
 }
 .visibleNow#a-little-bit {
-	visibility: visible;
+	display: inline-block;
 }
 #tech-no-log-ic {
 	height: 27px;
