@@ -78,7 +78,14 @@
   <a name="aboutSection">
     <article role="article">
       <section class="sectionContent">
-        <h1>About me</h1>
+        <div class="section-title-wrapper">
+          <div class="animated-gif-wrapper" id="animated-gif-wrapper-about-me">
+            <img src="Images/a-little-bit-project.gif" title="a little bit" alt="a little bit" id="a-little-bit"/>
+          </div>
+          <div class="title-wrapper">
+            <h1 id="about-me-title">About me</h1>
+          </div>
+        </div>
         <p>I'm a curious, motivated person with a passion for exploring how art and science intertwine. &nbsp;After diving into the art of music production, I've developed an ever growing interest in technology. &nbsp;As a current computer science student, I'd like to learn about data science and machine intelligence in hopes to live a life that encompasses my passions.
         </p>
       </section>
@@ -167,7 +174,14 @@
 <div class="block-text-center">
 
     <section class="sectionContent">
-      <h1>Tech</h1>
+      <div class="section-title-wrapper">
+        <div class="title-wrapper">
+          <h1 id="tech-title">Tech</h1>
+        </div>
+        <div class="animated-gif-wrapper" id="animated-gif-wrapper-tech">
+          <img data-original="Images/tech-no-logic-project.gif" title="-no-log-ic" alt="-no-log-ic" id="tech-no-log-ic" class="lazy" width="135" height="27"/>
+        </div>
+      </div>
       <article role="article">
         <section class="sectionContent tech-article">
           <p>It's my first year as a computer science undergraduate, but I'm already deeply intrigued by the possibilities and opportunities to use technology to make the world a better place.  I'm currently involved in
@@ -273,7 +287,17 @@
 <div class="block-text-center musicWrapper">
 
     <section class="sectionContent">
-      <h1>Music</h1>
+      <div class="section-title-wrapper">
+        <div class="animated-gif-wrapper" id="animated-gif-wrapper-music">
+          <img data-original="Images/music-lines-project.gif" title="music-lines" alt="music-lines" id="music-lines" class="lazy" width="115" height="25"/>
+        </div>
+        <div class="title-wrapper">
+          <h1 id="music-title">Music</h1>
+        </div>
+        <div class="animated-gif-wrapper" id="animated-gif-wrapper-music-right">
+          <img data-original="Images/music-lines-right-project.gif" title="music-lines-right" alt="music-lines-right" id="music-lines-right" class="lazy" width="115" height="25"/>
+        </div>
+      </div>
       <div class="musicPlayer" id="spotify-follow">
         <iframe src="https://embed.spotify.com/follow/1/?uri=spotify:user:1257181544&size=detail&theme=light&show-count=0" width="195" height="56" scrolling="no" frameborder="0" style="border:none; overflow:hidden;" allowtransparency="true"></iframe>
       </div>
@@ -315,7 +339,12 @@
 <div class="block-text-center" id="contact-section-id">
   <a name="contactSection">
     <section class="sectionContent">
-      <h1>Contact</h1>
+      <div class="section-title-wrapper">
+        <h1 class="title-wrapper">Contact</h1>
+        <div class="animated-gif-wrapper" id="animated-gif-wrapper-contact">
+          <img data-original="Images/contact-dots-project.gif" title="contact-dots" alt="contact-dots" id="contact-dots" class="lazy" width="115" height="25"/>
+        </div>
+      </div>
       <div class="contact-form-wrapper">
         <div id="main">
         <h3>(Under Construction)</h3>
@@ -324,19 +353,19 @@
           <form id="contact-form" action="ec2-54-68-18-98.us-west-2.compute.amazonaws.com/formmail.php" method="post">
             <div>
               <label>
-                <span>Name:</span>
+                <span>Name*</span>
                 <input name="name" placeholder="Please enter your name" type="text" tabindex="1" required size="50">
               </label>
             </div>
             <div>
               <label>
-                <span>Email:</span>
+                <span>Email*</span>
                 <input name="email" placeholder="Please enter your email address" type="email" tabindex="2" required size="50">
               </label>
             </div>
             <div>
               <label>
-                <span>Message:</span>
+                <span>Message*</span>
                 <textarea name="comments" placeholder="Message..." tabindex="3" required></textarea>
               </label>
             </div>
@@ -380,5 +409,7 @@
 <script type="text/javascript" src="Javascript/smoothscroll.js"></script>
 <script type="text/javascript" src="Javascript/form.js"></script>
 <script type="text/javascript" src="Javascript/nav-hover.js"></script>
+<script type="text/javascript" src="Javascript/aLittleBitImgShow.js"></script>
+<script type="text/javascript" src="Javascript/jquery.lazyload.js"></script>
 </body>
 </html>

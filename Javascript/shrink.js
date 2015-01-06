@@ -15,6 +15,9 @@ function init() {
       if (classie.has(img,"smaller")) {
         classie.remove(img,"smaller");
         classie.remove(background, "smaller");
+
+        aLittleBit = document.querySelector()
+
       }
     }
   });
