@@ -276,67 +276,7 @@ nav a {
 	background-size: contain;
 	margin-bottom: 3px;
 }
-.logoHome.more-transparent{
-	opacity: 0.4;
-	-webkit-transition: all .5s ease 0s;
-	-o-transition: all .5s ease 0s;
-	transition: all .5s ease 0s;
-}
-.logoInstagram.more-transparent {
-	opacity: 0.4;
-	-webkit-transition: all .5s ease 0s;
-	-o-transition: all .5s ease 0s;
-	transition: all .5s ease 0s;
-}
-.logoFacebook.more-transparent {
-	opacity: 0.4;
-	-webkit-transition: all .5s ease 0s;
-	-o-transition: all .5s ease 0s;
-	transition: all .5s ease 0s;
-}
-.logoTwitter.more-transparent {
-	opacity: 0.4;
-	-webkit-transition: all .5s ease 0s;
-	-o-transition: all .5s ease 0s;
-	transition: all .5s ease 0s;
-}
-.logoGithub.more-transparent {
-	opacity: 0.4;
-	-webkit-transition: all .5s ease 0s;
-	-o-transition: all .5s ease 0s;
-	transition: all .5s ease 0s;
-}
-.logoSoundcloud.more-transparent {
-	opacity: 0.4;
-	-webkit-transition: all .5s ease 0s;
-	-o-transition: all .5s ease 0s;
-	transition: all .5s ease 0s;
-}
-.logoEmail.more-transparent {
-	opacity: 0.4;
-	-webkit-transition: all .5s ease 0s;
-	-o-transition: all .5s ease 0s;
-	transition: all .5s ease 0s;
-}
-.more-transparent#navAboutId {
-	opacity: 0.4;
-	-webkit-transition: all .5s ease 0s;
-	-o-transition: all .5s ease 0s;
-	transition: all .5s ease 0s;
-}
-.more-transparent#navTechId {
-	opacity: 0.4;
-	-webkit-transition: all .5s ease 0s;
-	-o-transition: all .5s ease 0s;
-	transition: all .5s ease 0s;
-}
-.more-transparent#navMusicId {
-	opacity: 0.4;
-	-webkit-transition: all .5s ease 0s;
-	-o-transition: all .5s ease 0s;
-	transition: all .5s ease 0s;
-}
-.more-transparent#navContactId {
+.logoHome.more-transparent, .logoInstagram.more-transparent, .logoFacebook.more-transparent, .logoTwitter.more-transparent, .logoGithub.more-transparent, .logoSoundcloud.more-transparent, .logoEmail.more-transparent, .more-transparent#navAboutId, .more-transparent#navTechId, .more-transparent#navMusicId, .more-transparent#navContactId {
 	opacity: 0.4;
 	-webkit-transition: all .5s ease 0s;
 	-o-transition: all .5s ease 0s;
@@ -366,6 +306,22 @@ img.smaller#sigImg {
 	top: -3px;
 
 }
+@media screen and (max-width:480px) {
+img#sigImg {
+	top: 50px;
+}
+img.smaller#sigImg {
+	width: 40%;
+	right: 30%
+}
+#navLeft{
+	display: none; !important
+}
+#navRight{
+	display: none; !important
+}
+}
+
 
 
 
@@ -482,6 +438,13 @@ h2 {
 	margin-top: 0px;
 	color: rgba(26,26,26,.7);
 }
+@media screen and (max-width:480px) {
+.block-text-center .sectionContent p {
+	width: 100%;
+	margin-right: 0;
+	margin-left: 0;
+}
+}
 .section-title-wrapper {
 	text-align: center;
 }
@@ -549,6 +512,14 @@ h2 {
 	margin: 30px 0 0px 0;
 	color: rgba(26,26,26, .9);
 	text-shadow: 2px 2px rgba(26,26,26, .3);
+}
+@media screen and (max-width:480px) {
+#a-little-bit {
+	height: 15px;
+}
+#animated-gif-wrapper-about-me {
+	right: 78px;
+}
 }
 
 /*-----------------------------Recent Events-------------------------------*/
@@ -680,6 +651,17 @@ button:hover {
 .list-num {
 	font-size: small;
 	color: rgba(26,26,26, .6);
+}
+@media screen and (max-width:480px) {
+.techContainerRight {
+	float: none;
+	margin-top: 30px;
+	width: 100%;
+}
+.techContainerLeft {
+	float: none;
+	width: 100%;
+}
 }
 
 /*----------------------------------Music----------------------------------*/
