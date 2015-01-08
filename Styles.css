@@ -861,6 +861,6 @@ video {
 	margin-left: auto;
 	margin-right: auto;
 }
-.block-text-center .gradesSection {
-	overflow: auto;
+.gradesSection {
+	border-bottom: none; !important
 }
