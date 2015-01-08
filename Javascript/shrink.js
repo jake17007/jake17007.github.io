@@ -16,7 +16,6 @@ function init() {
         classie.remove(img,"smaller");
         classie.remove(background, "smaller");
 
-        aLittleBit = document.querySelector()
 
       }
     }
