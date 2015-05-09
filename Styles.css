@@ -306,6 +306,36 @@ img.smaller#sigImg {
 	top: 8px;
 
 }
+/*-----Social Not in Nav-----*/
+#socialBottom {
+	display: none;
+	width: 100%;
+	margin: 0 auto;
+}
+#socialBottom ul {
+	display: inline;
+	margin: 0;
+	-webkit-filter: invert(100%);
+	list-style-type: none;
+}
+#socialOnMobile {
+	display: none;
+	width: 100%;
+	margin: 0 auto;
+	z-index: 100;
+}
+#socialOnMobile ul {
+	padding: 0;
+	-webkit-padding-start: 0px;
+	margin: 0;
+
+	-webkit-filter: invert(100%);
+	list-style-type: none;
+}
+#socialOnMobile ul li {
+	display: inline;
+}
+
 @media screen and (max-width:480px) {
 img#sigImg {
 	top: 65px;
@@ -322,6 +352,13 @@ img.smaller#sigImg {
 #navRight{
 	display: none; !important
 }
+#socialOnMobile {
+	display: inline-block;
+}
+#socialBottom {
+	display: inline-block;
+}
+
 }
 
 
