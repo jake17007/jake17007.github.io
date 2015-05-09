@@ -288,7 +288,7 @@ nav a {
 img#sigImg {
 width: 50%;
 position: absolute;
-top: 157px;
+top: 250px;
 right: 25%;
 -webkit-transition: all 0.5s;
 -moz-transition: all 0.5s;
@@ -300,19 +300,21 @@ transition: all 0.5s;
 /*-----Small Signature-----*/
 
 img.smaller#sigImg {
-	width: 10%;
+	width: 20%;
 	position: absolute;
-	right: 45%;
-	top: -3px;
+	right: 40%;
+	top: 8px;
 
 }
 @media screen and (max-width:480px) {
 img#sigImg {
-	top: 50px;
+	top: 65px;
+	width: 90%;
+	right: 5%;
 }
 img.smaller#sigImg {
-	width: 40%;
-	right: 30%
+	width: 90%;
+	right: 5%;
 }
 #navLeft{
 	display: none; !important
@@ -371,9 +373,9 @@ img.smaller#sigImg {
 	display: block;
 }
 h1 {
-	font-family: source-serif-pro;
+	font-family: aktiv-grotesk-std;
 	font-style: normal;
-	font-variant: small-caps;
+	/*font-variant: small-caps;*/
 	font-weight: 400;
 	font-size: 2em;
 	text-shadow: 0 0px #FFFFFF;
@@ -514,12 +516,25 @@ h2 {
 	text-shadow: 2px 2px rgba(26,26,26, .3);
 }
 @media screen and (max-width:480px) {
+.block-text-center {
+
+	width: 90%;
+}
+
 #a-little-bit {
 	height: 15px;
+	position: absolute;
+	bottom: 0px;
+}
+#tech-no-log-ic, #music-lines, #music-lines-right, #contact-dots {
+	position: absolute;
+	bottom: 0px;
 }
 #animated-gif-wrapper-about-me {
 	right: 78px;
 }
+
+
 }
 
 /*-----------------------------Recent Events-------------------------------*/
@@ -563,7 +578,15 @@ h2 {
 .insta-pic {
 	max-width: 100%;
 }
-
+@media screen and (max-width:480px) {
+.recent-events-sq-container {
+	max-width: 70%;
+	margin-bottom: 10px;
+}
+.little-pic {
+	max-width: 40%;
+}
+}
 /*----------------------------------Tech----------------------------------*/
 
 .techContent {
