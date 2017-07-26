@@ -93,109 +93,139 @@
         <h2 class="page-header">
           About
         </h2>
-        <div class="col-sm-8">
-          <h4>
-            The Problem
-          </h4>
-          <div>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut varius eleifend odio sed blandit. Aliquam ipsum mauris, porta in nisi ac, ornare condimentum libero. Maecenas tempor massa hendrerit lacus auctor, sed rhoncus felis imperdiet. Aenean a rhoncus arcu.
+        <div class="row">
+          <div class="col-sm-8">
+            <h4>
+              The Problem
+            </h4>
+            <div>
+              <p>The <a href="http://quantifiedself.com/" target="_blank">Quantified Self</a> community is a group of individuals who track and analyze aspects of their lives to gain insight, most often to aid decision making toward achieving goals -- think counting calories for losing weight. Data from multiple sources can lead to even greater insight.</p>
+              <p>
+              While platforms for aggregating personal data exist, two limiting factors arise: First, 1.) the platform takes charge of the analytics and, due to human resource limitations, only offers a narrow scope of "one-size-fits-all" analyses; or 2.) the platform outsources the analytics to a community of developers, BUT gives them the personal data, reducing privacy and increasing risk for the user.</p>
+
+
+            </div>
+
+            <h4>
+              The Solution
+            </h4>
+            <div>
+              Connectrix aims to solve both of these problems and more. 1.) Instead of taking on the role of creating analyses, Connectrix only acts as the data aggregator and outsources analysis creation to a community of developers. 2.) Instead of giving the data to these developers, the software is run on Connectrix servers. This offers users specific, personal analyses while increasing privacy and reducing risk. Additionally, Connectrix makes it easy for developers to create and publish these analyses.
+            </div>
           </div>
+          <div class="col-sm-4">
+            <div class="btn-vert-block">
+              <a href="https://connectrix-dev.herokuapp.com" target="_blank" type="button" class="btn btn-primary btn-block"><i class="fa fa-external-link fa-fw"></i> Go to Connectrix</a>
 
-          <h4>
-            The Solution
-          </h4>
-          <div>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut varius eleifend odio sed blandit. Aliquam ipsum mauris, porta in nisi ac, ornare condimentum libero. Maecenas tempor massa hendrerit lacus auctor, sed rhoncus felis imperdiet. Aenean a rhoncus arcu.
-          </div>
-        </div>
-        <div class="col-sm-4">
-          <div class="btn-vert-block">
-            <a href="https://connectrix-dev.herokuapp.com" target="_blank" type="button" class="btn btn-primary btn-block"><i class="fa fa-external-link fa-fw"></i> Go to Connectrix</a>
-
-            <a href="https://github.com/jake17007/PersonalDataWebApp" target="_blank" type="button" class="btn btn-primary btn-block"><i class="fa fa-github fa-fw"></i> View Source Code</a>
+              <a href="https://github.com/jake17007/PersonalDataWebApp" target="_blank" type="button" class="btn btn-primary btn-block"><i class="fa fa-github fa-fw"></i> View Source Code</a>
 
 
-            <ul class=" list-group lead btn-block">
-              <li class="list-group-item"><strong>Technologies</strong></li>
-              <li class="list-group-item">Node.js</li>
-              <li class="list-group-item">AngularJS</li>
-              <li class="list-group-item">Express</li>
-              <li class="list-group-item">MongoDB</li>
-              <li class="list-group-item">Python</li>
-            </ul>
-          </div>
+              <ul class=" list-group lead btn-block">
+                <li class="list-group-item"><strong>Technologies</strong></li>
+                <li class="list-group-item">Node.js</li>
+                <li class="list-group-item">AngularJS</li>
+                <li class="list-group-item">Express</li>
+                <li class="list-group-item">MongoDB</li>
+                <li class="list-group-item">Python</li>
+              </ul>
+            </div>
 
-        </div>
-
-        <h2 class="page-header">Developing for a Connectrix User</h2>
-        <div class="sub-section">
-          <h3>
-            Establishing Connections
-          </h3>
-          <div>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut varius eleifend odio sed blandit. Aliquam ipsum mauris, porta in nisi ac, ornare condimentum libero. Maecenas tempor massa hendrerit lacus auctor, sed rhoncus felis imperdiet. Aenean a rhoncus arcu.
-          </div>
-
-          <h3>
-            Using Connectrix Apps
-          </h3>
-          <div>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut varius eleifend odio sed blandit. Aliquam ipsum mauris, porta in nisi ac, ornare condimentum libero. Maecenas tempor massa hendrerit lacus auctor, sed rhoncus felis imperdiet. Aenean a rhoncus arcu.
           </div>
         </div>
+        <div class="row">
 
-        <h2 class="page-header">Developing for a Connectrix Developer</h2>
-        <div class="sub-section">
-          <h3>
-            Selecting Required Connections
-          </h3>
-          <div>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut varius eleifend odio sed blandit. Aliquam ipsum mauris, porta in nisi ac, ornare condimentum libero. Maecenas tempor massa hendrerit lacus auctor, sed rhoncus felis imperdiet. Aenean a rhoncus arcu.
+          <div class="col-sm-12">
+
+
+            <h2 class="page-header">Developing for a Connectrix User</h2>
+            <div class="sub-section">
+              <h3>
+                Establishing Connections
+              </h3>
+              <div>
+                When a user first creates an account and logs in, they need to establish connections to personal data sources. Currently available at the time of this writing are connections to <a href="https://www.fitbit.com/" target="_blank">Fitbit</a>, <a href="https://moves-app.com/" target="_blank">Moves</a>, and <a href="https://www.youtube.com/" target="_blank">YouTube</a>. The user simply clicks a "Connect" button, which redirects them to the provider's website where they allow Connectrix to access their data via API. Once they accept, Connectrix receives an access token, which is the only personal data persisted in the Connectrix database. This occurs via the OAuth 2.0 authorization flow protocol and is implemented with the help of <a href="http://passportjs.org/" target="_blank">Passport</a> (easily integrated since the backend is written in Node.js with the Express framework).
+              </div>
+
+              <h3>
+                Using Connectrix Apps
+              </h3>
+              <div>
+                When connections have been established, the user may start using analyses available on the Connectrix App Store. When a user finds an app they want to use, they add it to their favorites. Then when they wish to run it (and only then), Connectrix fetches the data via APIs, fetches the program from Github, and runs the data through the program on the Connectrix server. The output is then passed to the client and injected into the webpage for the user's viewing. See "The Process of Running a Connectrix App" below for more details. The user's Dashboard lists their connections and favorite apps.
+              </div>
+            </div>
+
+            <h2 class="page-header">Developing for a Connectrix Developer</h2>
+            <div class="sub-section">
+              <h3>
+                Selecting Required Connections
+              </h3>
+              <div>
+                Since the responsibility of data aggregation is shifted from the developer to Connectrix and the privacy-preserving data flow disallows developers from ever viewing the data, it becomes very important for them to know exactly what they're getting before hand to build a program that effectively processes that data. For this reason, when an app is created, the developer must indicate which data sources are required for the app to run. Further, a developer can choose from a number of more specific endpoints available for each API; e.g. a developer can choose "<a href="https://dev.fitbit.com/docs/body/#get-body-time-series" target="_blank">Fitbit - Body Weight Time Series</a>" in addition to "<a href="https://dev.moves-app.com/docs/api_storyline" target="_blank">Moves - Storyline</a>."
+              </div>
+              <h3>
+                Developing and Testing Connectrix Apps
+              </h3>
+              <div>
+                <p>The entire process of developing, testing, and publishing a "Hello, world" Connectrix app is detailed in the <a href="https://connectrix-dev.herokuapp.com/developers/developerGuide" target="_blank">Developer Guide</a>. But in general, creates a new app simply by specifying a name and description, selecting the connections required for the app, and pointing Connectrix to a public Github repository where the application is to be stored.</p>
+                <p>At this point, the developer can begin writing a Python program that accepts data, processes it, and returns HTML with embedded CSS and JavaScript. When the app is run, the user's data will be fed into the Python program, processed, and the output will be passed to the client and injected into the webpage for the user to view.</p>
+                <p>You may be wondering how a developer can test such a program with only a guess of what the user's data will look like. To handle this, Connectrix provides a test engine in the form of a Node.js app to be run locally. This test engine runs a program exactly how Connectrix would on the server, except it does not fetch data from the web; rather, it pulls in example data from a JSON file. Output is written to an HTML file that the developer can open in a browser to see exactly what the app will look like when a user runs it in the live environment. Additionally, the developer may fetch their own live data with functionality on the Connectrix site. This is returned as JSON, which can be copied/pasted into the JSON file that the test engine pulls from.</p>
+
+
+              </div>
+            </div>
+
+            <h2 class="page-header">The Process of Running a Connectrix App</h2>
+            <div class="sub-section">
+              <h3>
+                Retrieving User Data
+              </h3>
+              <div>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut varius eleifend odio sed blandit. Aliquam ipsum mauris, porta in nisi ac, ornare condimentum libero. Maecenas tempor massa hendrerit lacus auctor, sed rhoncus felis imperdiet. Aenean a rhoncus arcu.
+              </div>
+
+              <h3>
+                Retrieving and Building an App
+              </h3>
+              <div>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut varius eleifend odio sed blandit. Aliquam ipsum mauris, porta in nisi ac, ornare condimentum libero. Maecenas tempor massa hendrerit lacus auctor, sed rhoncus felis imperdiet. Aenean a rhoncus arcu.
+              </div>
+
+              <h3>
+                Passing Data to an App
+              </h3>
+              <div>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut varius eleifend odio sed blandit. Aliquam ipsum mauris, porta in nisi ac, ornare condimentum libero. Maecenas tempor massa hendrerit lacus auctor, sed rhoncus felis imperdiet. Aenean a rhoncus arcu.
+              </div>
+
+              <h3>
+                Receiving Output from an App and Injecting it into the View
+              </h3>
+              <div>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut varius eleifend odio sed blandit. Aliquam ipsum mauris, porta in nisi ac, ornare condimentum libero. Maecenas tempor massa hendrerit lacus auctor, sed rhoncus felis imperdiet. Aenean a rhoncus arcu.
+              </div>
+            </div>
+
+            <h2 class="page-header">Developing for a Connectrix Developer</h2>
+            <div class="sub-section">
+              <h3>
+                Data Leaks from Within the the Connectrix App
+              </h3>
+              <div>
+                PyPy sandbox.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut varius eleifend odio sed blandit. Aliquam ipsum mauris, porta in nisi ac, ornare condimentum libero. Maecenas tempor massa hendrerit lacus auctor, sed rhoncus felis imperdiet. Aenean a rhoncus arcu.
+              </div>
+
+              <h3>
+                Data Leaks from Within the User View
+              </h3>
+              <div>
+                iFrame with restrictions.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut varius eleifend odio sed blandit. Aliquam ipsum mauris, porta in nisi ac, ornare condimentum libero. Maecenas tempor massa hendrerit lacus auctor, sed rhoncus felis imperdiet. Aenean a rhoncus arcu.
+              </div>
+            </div>
           </div>
-          <h3>
-            Developing and Testing Connectrix Apps
-          </h3>
-          <div>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut varius eleifend odio sed blandit. Aliquam ipsum mauris, porta in nisi ac, ornare condimentum libero. Maecenas tempor massa hendrerit lacus auctor, sed rhoncus felis imperdiet. Aenean a rhoncus arcu.
-          </div>
+
         </div>
-
-        <h2 class="page-header">The Process of Running a Connectrix App</h2>
-        <div class="sub-section">
-          <h3>
-            Retrieving User Data
-          </h3>
-          <div>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut varius eleifend odio sed blandit. Aliquam ipsum mauris, porta in nisi ac, ornare condimentum libero. Maecenas tempor massa hendrerit lacus auctor, sed rhoncus felis imperdiet. Aenean a rhoncus arcu.
-          </div>
-
-          <h3>
-            Retrieving and Building an App
-          </h3>
-          <div>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut varius eleifend odio sed blandit. Aliquam ipsum mauris, porta in nisi ac, ornare condimentum libero. Maecenas tempor massa hendrerit lacus auctor, sed rhoncus felis imperdiet. Aenean a rhoncus arcu.
-          </div>
-        </div>
-
-        <h2 class="page-header">Developing for a Connectrix Developer</h2>
-        <div class="sub-section">
-          <h3>
-            Data Leaks from Within the the Connectrix App
-          </h3>
-          <div>
-            PyPy sandbox.
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut varius eleifend odio sed blandit. Aliquam ipsum mauris, porta in nisi ac, ornare condimentum libero. Maecenas tempor massa hendrerit lacus auctor, sed rhoncus felis imperdiet. Aenean a rhoncus arcu.
-          </div>
-
-          <h3>
-            Data Leaks from Within the User View
-          </h3>
-          <div>
-            iFrame with restrictions.
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut varius eleifend odio sed blandit. Aliquam ipsum mauris, porta in nisi ac, ornare condimentum libero. Maecenas tempor massa hendrerit lacus auctor, sed rhoncus felis imperdiet. Aenean a rhoncus arcu.
-          </div>
-        </div>
-
 
 
       </div>
