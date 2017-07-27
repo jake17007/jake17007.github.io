@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Jacob Beauchamp</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/landing-page.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top topnav" role="navigation">
+        <div class="container topnav">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand topnav" href="index.html">Jacob Beauchamp</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="projects.html">Projects</a>
+                    </li>
+                    <li>
+                        <a href="Resume_JacobBeauchamp_2017-03-18_PDF.pdf">Resume</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+
+    <!-- Header -->
+    <div class="banner-other">
+
+        <div class="container">
+
+            <div class="row">
+              <div class="text-center">
+                <h2>Machine Learning & Computer Vision</h2>
+                <h3>Training a deep convolutional neural network to count the number of cars in an image of a parking lot</h3>
+              </div>
+            </div>
+
+        </div>
+        <!-- /.container -->
+
+    </div>
+    <!-- /.banner -->
+
+    <!-- Page Content -->
+
+
+  <div class="content-section-b">
+
+    <div class="container text-section">
+      <div class="col-sm-10 col-sm-offset-1">
+        <h2 class="page-header">
+          About
+        </h2>
+        <div class="row">
+          <div class="col-sm-8">
+            <h4>
+              The Problem
+            </h4>
+            <div>
+              <p>As undergraduate participants of Indiana University Computer Vision Lab, we were tasked with discovering ways to combat the problem identifying counterfeit integrated circuits (ICs). Counterfeit ICs are essentially electronics that are made to look and act like regular ICs, but may be less expensive to produce or even contain malicious components. One of the ways to find conterfeit ICs it to simply count the number of ICs on a circuit board and compare that number to what it should be. However, this is extremely time consuming.</p>
+            </div>
+
+            <h4>
+              The Solution
+            </h4>
+            <div>
+              <strong>I trained a deep convolutional neural network (CNN or convnet), a particular method of machine learning, to count the number of cars in an image of a parking lot.</strong> I took this approach at the suggestion of my faculty advisor because 1.) viewed from above, parking lots and circuit boards containing ICs share a similar structure; 2.) there are, to our knowledge, no large datasets of circuit boards, while the ~12,000 sample parking lot dataset we found was ready to use; and 3.) I wanted to have some fun with convnets!
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="btn-vert-block">
+              <a href="https://github.com/jake17007/CountingCarsCNN" target="_blank" type="button" class="btn btn-primary btn-block"><i class="fa fa-github fa-fw"></i> View Source Code</a>
+
+
+              <ul class=" list-group lead btn-block text-center">
+                <li class="list-group-item"><strong>Technologies</strong></li>
+                <li class="list-group-item"><a href="https://www.python.org/" target="_blank">Python</a></li>
+                <li class="list-group-item"><a href="https://www.tensorflow.org/" target="_blank">TensorFlow</a></li>
+                <li class="list-group-item"><a href="https://keras.io/" target="_blank">Keras</a></li>
+                <li class="list-group-item"><a href="https://portal.futuresystems.org/" target="_blank">FutureSystems Cloud Computing</a></li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+        <div class="row">
+
+          <div class="col-sm-12">
+
+
+            <h2 class="page-header">Methods</h2>
+            <div class="sub-section">
+              <h3>
+                Existing Literature
+              </h3>
+              <div>
+                <div class="row">
+                  <div class="col-sm-12">
+
+                    <p>In research conducted by Cazamias and Marek at Stanford University, the authors attempted to count the number of empty parking spaces in images of parking lots. They did this in two ways, the second of which would be the basis for my attempt at counting cars instead; here they trained a CNN on 70%/20%/10% train/test/validation split of 12,417 images of parking lots to yield a model achieving an accuracy of about 81%. The images of the parking lots consisted of three different camera angles of two different parking lots. Each was labeled with the number of cars present.
+                    </p>
+
+                    <p>The CNN, which I reconstructed from scratch in TensorFlow/Keras, was composed of 3 convolutional layers of depths 10, 20, and 30 nodes respectively. A 5 x 5 kernal was used at each convolutional layer, and each was followed with batch normalization, a ReLU activation function, then max pooling of size 2 x 2. After these three layers, the input was flattened and fed to three fully connected layers of size 30, 20, and 10 respectively with ReLU activations after each. A softmax layer was used to classify a "count" of the number of empty spaces or cars. in their research they classified between 0 and 20 empty spaces, saying that anything over 20 empty spaces would matter in application since it would be easy to find a parking spot; however, my research used classes between 0 and 100 since there were no images in which the number of cars exceeded 100. This, I'll reason, could be why my accuracy was much lower than theirs on their problem.</p>
+                  </div>
+
+                </div>
+              </div>
+
+
+
+              <h3>
+                Technologies
+              </h3>
+              <div>
+                My favorite part of the project was learning and using cutting edge technologies. I started off using TensorFlow directly on my laptop. I did use my GPU, but it ate up the resources and took about 10-15 minutes to train the models. Then I got access to FutureSystems, a cloud computing service associated with our univesrity. I trained on an NVidia Tesla K80, which reduced training time to less than 5 minutes and freed up my machine to do other things. This came in very handy when training and retraining for cross validation. Eventually, a colleague told me about Keras, a library that sits on top of TensorFlow, which I tried and loved. It made the CNN building and tinkering much easier and intuitive.
+              </div>
+            </div>
+
+            <h2 class="page-header">Results</h2>
+            <div class="sub-section">
+              <h3>
+                Accuracy
+              </h3>
+              <div>
+                <div class="row">
+                  <div class="col-sm-12">
+                    <p>My CNN would ultimately achieve an accuracy of about 60%, though given the differences in difficulty between our problems (as I reason above my random benchmark would be 1/100 while theirs was 1/20), it's fair that my accuracy be lower than their 81%. I also surpassed their accuracy, achieving 84% counting empty spaces, by implementing a technique on the data that I used to increase the accuracy on my problem.</p>
+
+                    <p>I tried several things to increase an accuracy of ~55% initially. The first was using a continuous predictor instead of discrete classifier. This produced similar, but worse results. I also tried using color instead of grayscaled images, as is often done to speed up training time. This did help a bit, but results weren't much better. Finally, the most prroductive of my efforts were in manipulating the images before training. I had noticed that some images labeled as having 0 cars, actually often contained some. So, looking at details of the dataset, I found that only cars within certain coordinates of the parking lots were counted. Therefore, I cropped the pictures to bound only those coordinates. I would argue this to be legal, because for counting ICs on an integrated circuit, one would be taking many, practically identical pictures, and could crop the images to what they knew could contain ICs. This is what ultimately lead to my highest accuracy of 60% and how I achieved 84% accuracy on the previous reachers' task, compared to their 81%.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="text-center center-pic">
+                    <img src="img/parkinglot.png" alt="connectrix graph">
+                    <div class="col-sm-8 col-sm-offset-2 img-tag">
+                      <small>Only cars in the bounded areas were counted. For example, this image was labled to contain 0 cars even though there are obviously 2 present. Therefore, cropping to these cardinal bounds removed much of the noise from the other cars. All images consisted of two parking lots, one of which had two different camera angles. Coordinates of spaces counted were included in the dataset documentation.</small>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+              <h3>
+                Validation
+              </h3>
+              <div>
+                <div class="row">
+                  <div class="col-sm-12">
+                    <p>I used ten interations of Monte Carlo Cross Validation to validate these results. The standard deviation among trials was low.</p>
+                    <p>With the cropped photo method detailed above, I graphed the following frequencies of car count labels and car count predictions using the trained model in order to visualize their distributions. I'd say they are faily similar, enough to conclude that the model wasn't just guessing and getting lucky.</p>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="text-center center-pic">
+                    <img src="img/distribution_labels.png" alt="connectrix graph">
+                    <div class="col-sm-8 col-sm-offset-2 img-tag">
+                      <small><strong>Distribution of Number of Cars Accross Samples According to Labels</strong>: The distribution of the number of cars in the full dataset was skewed toward 0, i.e. many photos had either 0 cars. But with the range of classification much wider (the model predicted from 0 to 100 cars), the probability of 0 cars was less than 25% for a given photo.</small>
+                    </div>
+                  </div>
+                  <div class="text-center center-pic">
+                    <img src="img/distribution_predictions.png" alt="connectrix graph">
+                    <div class="col-sm-8 col-sm-offset-2 img-tag">
+                      <small><strong>Distribution of Number of Cars Accross Samples According to Classification by the Trained Model</strong>: Here the distribution of classifications resembles the actual distribution. Interesting spikes occur at around 72, 90, and 95 cars, where the model was biased towards those numbers instead of spreading things out.</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <h2 class="page-header">Future</h2>
+            <div class="sub-section">
+              <h3>
+
+              </h3>
+              <div>
+                <p>There are several things that can be done to improve this model. Since there seems to be high bias, further meta-analysis of the model and its results could be done to see if the bias-variance trade-off is biased towards bias (haha). If this is the case the architecture could be made deeper or regularization parameters relaxed, since high bias is indicative of underfitting. Another interesting approach would be to use transfer learning, perhaps with a model trained on ImageNet, that might help the algorithm identify cars.</p>
+
+                <p>However, if I do choose to proceed with this project, I'll probably try to bring it back to the original problem of counting ICs. Perhaps after some adjustments, transfer learning from this model to a model trained on an IC/circuit board dataset (During this research I helped our lab label ICs on about 1000 images of circuit boards.) Regardless, it was a fun project, and I'm glad I got to test my machine learning knowledge and learn a lot more in the process.</p>
+
+                <ul>
+
+                </ul>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <ul class="list-inline">
+                        <li>
+                            <a href="index.html">Home</a>
+                        </li>
+                        <li class="footer-menu-divider">&sdot;</li>
+                        <li>
+                            <a href="projects.html">Projects</a>
+                        </li>
+                        <li class="footer-menu-divider">&sdot;</li>
+                        <li>
+                            <a href="resume">Resume</a>
+                        </li>
+                    </ul>
+                    <p class="copyright text-muted small">Created by Jacob Beauchamp 2017</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

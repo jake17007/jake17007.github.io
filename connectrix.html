@@ -99,9 +99,9 @@
               The Problem
             </h4>
             <div>
-              <p>The <a href="http://quantifiedself.com/" target="_blank">Quantified Self</a> community is a group of individuals who track and analyze aspects of their lives to gain insight, most often to aid decision making toward achieving goals -- think counting calories for losing weight. Data from multiple sources can lead to even greater insight.</p>
+              <p>The <a href="http://quantifiedself.com/" target="_blank">Quantified Self</a> community is a group of people who track and analyze their lives to gain insight, most often to aid in decision making towards achieving goals -- think counting calories to lose weight. Data from multiple sources can lead to even greater insight.</p>
               <p>
-              While platforms for aggregating personal data exist, two limiting factors arise: First, 1.) the platform takes charge of the analytics and, due to human resource limitations, only offers a narrow scope of "one-size-fits-all" analyses; or 2.) the platform outsources the analytics to a community of developers, BUT gives them the personal data, reducing privacy and increasing risk for the user.</p>
+              While platforms for aggregating personal data exist, two limiting factors arise: 1.) The platform takes charge of the analytics and, due to human resource limitations, only offers a narrow scope of "one-size-fits-all" analyses; or 2.) the platform outsources the analytics to a community of developers, BUT gives them the personal data, reducing privacy and increasing risk for the user.</p>
 
 
             </div>
@@ -110,23 +110,23 @@
               The Solution
             </h4>
             <div>
-              Connectrix aims to solve both of these problems and more. 1.) Instead of taking on the role of creating analyses, Connectrix only acts as the data aggregator and outsources analysis creation to a community of developers. 2.) Instead of giving the data to these developers, the software is run on Connectrix servers. This offers users specific, personal analyses while increasing privacy and reducing risk. Additionally, Connectrix makes it easy for developers to create and publish these analyses.
+              <strong>Connectrix is a platform for personal data analytics that connects personal data sources in the cloud to analytics apps created by a community of developers.</strong> Here's how it solves the problems mentioned above: 1.) By shifting the creation of analytics apps to a community of developers, users can access all kinds of analyses to find ones that suit their needs. 2.) Instead of giving the data to these developers, the analysees are run on Connectrix servers increasing user privacy and reducing risk. Connectrix also makes it super easy for developers to create and publish these analyses.
             </div>
           </div>
           <div class="col-sm-4">
             <div class="btn-vert-block">
               <a href="https://connectrix-dev.herokuapp.com" target="_blank" type="button" class="btn btn-primary btn-block"><i class="fa fa-external-link fa-fw"></i> Go to Connectrix</a>
 
-              <a href="https://github.com/jake17007/PersonalDataWebApp" target="_blank" type="button" class="btn btn-primary btn-block"><i class="fa fa-github fa-fw"></i> View Source Code</a>
+              <a href="https://github.com/jake17007/PersonalDataWebApp/tree/production" target="_blank" type="button" class="btn btn-primary btn-block"><i class="fa fa-github fa-fw"></i> View Source Code</a>
 
 
-              <ul class=" list-group lead btn-block">
+              <ul class=" list-group lead btn-block text-center">
                 <li class="list-group-item"><strong>Technologies</strong></li>
-                <li class="list-group-item">Node.js</li>
-                <li class="list-group-item">AngularJS</li>
-                <li class="list-group-item">Express</li>
-                <li class="list-group-item">MongoDB</li>
-                <li class="list-group-item">Python</li>
+                <li class="list-group-item"><a href="https://nodejs.org/en/" target="_blank">Node.js</a></li>
+                <li class="list-group-item"><a href="https://angularjs.org/" target="_blank">AngularJS</a></li>
+                <li class="list-group-item"><a href="https://expressjs.com/" target="_blank">Express</a></li>
+                <li class="list-group-item"><a href="https://www.mongodb.com/" target="_blank">MongoDB</a></li>
+                <li class="list-group-item"><a href="https://www.python.org/" target="_blank">Python</a></li>
               </ul>
             </div>
 
@@ -136,6 +136,11 @@
 
           <div class="col-sm-12">
 
+            <div class="row">
+              <div class="text-center center-pic">
+                <img src="img/connectrix_architecture.png" alt="connectrix graph">
+              </div>
+            </div>
 
             <h2 class="page-header">Developing for a Connectrix User</h2>
             <div class="sub-section">
@@ -143,14 +148,14 @@
                 Establishing Connections
               </h3>
               <div>
-                When a user first creates an account and logs in, they need to establish connections to personal data sources. Currently available at the time of this writing are connections to <a href="https://www.fitbit.com/" target="_blank">Fitbit</a>, <a href="https://moves-app.com/" target="_blank">Moves</a>, and <a href="https://www.youtube.com/" target="_blank">YouTube</a>. The user simply clicks a "Connect" button, which redirects them to the provider's website where they allow Connectrix to access their data via API. Once they accept, Connectrix receives an access token, which is the only personal data persisted in the Connectrix database. This occurs via the OAuth 2.0 authorization flow protocol and is implemented with the help of <a href="http://passportjs.org/" target="_blank">Passport</a> (easily integrated since the backend is written in Node.js with the Express framework).
+                When a user first creates an account and logs in, they need to establish connections to personal data sources. Currently available at the time of this writing are connections to <a href="https://www.fitbit.com/" target="_blank">Fitbit</a>, <a href="https://moves-app.com/" target="_blank">Moves</a>, and <a href="https://www.youtube.com/" target="_blank">YouTube</a>. The user simply clicks a "Connect" button, which redirects them to the provider's website where they allow Connectrix to access their data via API. Once they accept, Connectrix receives an access token, which is essentially the only personal data persisted in the Connectrix database. This occurs via the OAuth 2.0 authorization flow protocol and is implemented with the help of <a href="http://passportjs.org/" target="_blank">Passport</a> (easily integrated since the backend is written in Node.js with the Express framework).
               </div>
 
               <h3>
                 Using Connectrix Apps
               </h3>
               <div>
-                When connections have been established, the user may start using analyses available on the Connectrix App Store. When a user finds an app they want to use, they add it to their favorites. Then when they wish to run it (and only then), Connectrix fetches the data via APIs, fetches the program from Github, and runs the data through the program on the Connectrix server. The output is then passed to the client and injected into the webpage for the user's viewing. See "The Process of Running a Connectrix App" below for more details. The user's Dashboard lists their connections and favorite apps.
+                When connections have been established, the user may begin using analyses available on the <a href="https://connectrix-dev.herokuapp.com/appStore" target="_blank">Connectrix App Store</a>. When a user finds an app they want to use, they add it to their favorites. Then when they wish to run it (and only then), Connectrix fetches the data via APIs, fetches the program from Github, and runs the data through the program on the Connectrix server. The output is then passed to the client and injected into the webpage for the user's viewing. See "The Process of Running a Connectrix App" below for more details. The user's Dashboard lists their connections and favorite apps.
               </div>
             </div>
 
@@ -180,47 +185,70 @@
                 Retrieving User Data
               </h3>
               <div>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut varius eleifend odio sed blandit. Aliquam ipsum mauris, porta in nisi ac, ornare condimentum libero. Maecenas tempor massa hendrerit lacus auctor, sed rhoncus felis imperdiet. Aenean a rhoncus arcu.
+                <p>When a user wishes to run an app, a request is made to the Connectrix server with information of the user who made the request and which app they'd like to use. On the server, "Data Getters" are compiled according to the app's required connections and specific third party API enpoints, and they contain the necessary credentials of the user for retrieving the data. These Data Getters are JavaScript functions returning Promises and are run simultaneously with the <code>Promise.all()</code> method.</p>
+
+                <p>However, it is a bit more complex than that; the logic can be thought of as being two levels deep. The top level compiles Data Getters <em>by third party API <u>provider</u></em> (Fitbit, Moves, YouTube), and the lower level compiles Data Getters <em>by third party API <u>endpoint</u></em> (Fitbit - Body Weight Time Series, Fitbit - Calories Burned, etc.). This is to account for error handling at the lower level. For instance, if a request is made to the Fitbit API but the access token used had been expired, the error is caught and handled at the Fitbit level (reading the error in the Fitbit response, refreshing the access token according to Fitbit standards, storing it to the database). Then the API call for data is made again recursively (within limits) in the error handler. This way, each provider may use and reuse their own error handling code, calls for data are not rendundant, and everything runs asynchronously.</p>
+
+                <p>See the the <code>runApp</code> function in the <a href="https://github.com/jake17007/PersonalDataWebApp/blob/production/server/api/analysis/analysis.controller.js#L282" target="_blank">source code</a> to begin the journey down the rabbit hole.</p>
               </div>
 
               <h3>
                 Retrieving and Building an App
               </h3>
               <div>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut varius eleifend odio sed blandit. Aliquam ipsum mauris, porta in nisi ac, ornare condimentum libero. Maecenas tempor massa hendrerit lacus auctor, sed rhoncus felis imperdiet. Aenean a rhoncus arcu.
+                <p>Since app source code is stored in a public Github repository, retrieving them is done simply with the <a href="https://www.npmjs.com/package/nodegit" target="_blank">nodegit</a> Node module. The files are clones to the Connectrix server's filesystem. However, in order to run apps for multiple users simultaneously, these clones are indexed according to the number of clones currently on the system. (Storing the first directory as "clone-0," a second app run initiated by another user while clone-0 is still present would render a "clone-1," and so on.) The directories are deleting when done processing the data and a response is returned. See the "Security" section below for information about running untrusted code on the server.</p>
+                <p>Currently, apps may only be written in Python and use predetermined libraries that have been pre-installed on the server.</p>
               </div>
 
               <h3>
                 Passing Data to an App
               </h3>
               <div>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut varius eleifend odio sed blandit. Aliquam ipsum mauris, porta in nisi ac, ornare condimentum libero. Maecenas tempor massa hendrerit lacus auctor, sed rhoncus felis imperdiet. Aenean a rhoncus arcu.
+                After cloning the program to the server and retrieving the user's data, Connectrix spawns a child process (initiating a pre-named <code>app.py</code> main file) with the <a href="https://www.npmjs.com/package/python-shell" target="_blank">python-shell</a> Node module. This makes it easy to run and listen for data or errors from the Python program. Data is passed to the Python program's stdin stream and received stdout or stderr (most easily a <code>print</code> statement).
               </div>
 
               <h3>
-                Receiving Output from an App and Injecting it into the View
+                App Output
               </h3>
               <div>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut varius eleifend odio sed blandit. Aliquam ipsum mauris, porta in nisi ac, ornare condimentum libero. Maecenas tempor massa hendrerit lacus auctor, sed rhoncus felis imperdiet. Aenean a rhoncus arcu.
+                <p>Once the data is received from the Python script, it is returned in the response to the client. Then, it being HTML, it is injected into the app view page's HTML. This HTML output from the app could contain embedded JavaScript and CSS. For example, to create a graph, the developer could use the <a href="http://mpld3.github.io/" target="_blank">mpld3</a> Python library to convert a <a href="https://matplotlib.org/" target="_blank">matplotlib</a> figure to a browser compatible <a href="https://d3js.org/" target="_blank">D3.js</a> graph with full zoom, move, and reset functionality.</p>
+
+                <div class="row">
+                  <div class="text-center center-pic">
+                    <img src="img/connectrix_graph.png" alt="connectrix graph">
+                    <div class="col-sm-8 col-sm-offset-2 img-tag">
+                      <small>Screenshot of the "Calories Burned" graph in the "Weight Vs. Calorie Burn" app. See the <a href="https://github.com/jake17007/Connectrix_FitbitWeightVsCalorieBurn" target="_blank">source code</a> for an example of converting from matplotlib to D3.js.</small>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-sm-12">
+                    <p>Currently, the injected HTML is able to access and utilize all the resources already in the page such as Bootstrap and JQuery (and AngularJS app), but this should obviously be changed in the future. See the "Security" section below for details.</p>
+                  </div>
+
+                </div>
+
               </div>
             </div>
 
-            <h2 class="page-header">Developing for a Connectrix Developer</h2>
+            <h2 class="page-header">Security</h2>
             <div class="sub-section">
+              <div>
+                One of the biggest concerns for this application is security. As a centralized trusted-third-party, Connectrix acts as a safe place to process data. However, at this stage, there two vulverabilities in particular where data could be leaked to another party or other malicious activity could occur.
+              </div>
               <h3>
-                Data Leaks from Within the the Connectrix App
+                Malicious Python Script
               </h3>
               <div>
-                PyPy sandbox.
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut varius eleifend odio sed blandit. Aliquam ipsum mauris, porta in nisi ac, ornare condimentum libero. Maecenas tempor massa hendrerit lacus auctor, sed rhoncus felis imperdiet. Aenean a rhoncus arcu.
+                Currently, the app software is pulled in from Github and built on the Connectrix server -- the same server that runs the Connectrix app. This could be bad for two reasons. First, it could access any part of the filesystem that any other script could and distrupt the application or pull from the database. Second, it could fairly easily send the user's data across the network. To prevent this, the software could instead be built in a virtual machine with no access to the filesystem, and on top of that, in a sandbox that had no network capabilities. I have considered creating such an environment on an Amazon EC2 instance and using the <a href="http://pypy.org/" target="_blank">PyPy</a> sandbox.
               </div>
 
               <h3>
-                Data Leaks from Within the User View
+                Malicious Output
               </h3>
               <div>
-                iFrame with restrictions.
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut varius eleifend odio sed blandit. Aliquam ipsum mauris, porta in nisi ac, ornare condimentum libero. Maecenas tempor massa hendrerit lacus auctor, sed rhoncus felis imperdiet. Aenean a rhoncus arcu.
+                Another vulnerability lies in the fact that the app output is injected into the client application. This means that a malicious JavaScript function could run and access the AngularJS application. Or it could send the user's data accross the network. The combat this, I've considered using and iFrame with restrictions to the network.
               </div>
             </div>
           </div>

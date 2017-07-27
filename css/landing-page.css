@@ -241,6 +241,16 @@ p.copyright {
     }
 }
 
+.center-pic img {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  width: 500px;
+}
+
+.center-pic .img-tag {
+  padding-bottom: 30px;
+}
+
 @media(max-width:767px) {
     .banner-other h2 {
         margin: 0;
@@ -256,6 +266,12 @@ p.copyright {
 
     ul.banner-social-buttons > li:last-child {
         margin-bottom: 0;
+    }
+
+    .center-pic img {
+      padding-top: 20px;
+      padding-bottom: 20px;
+      width: 100%;
     }
 }
 
