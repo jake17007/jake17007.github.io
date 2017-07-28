@@ -106,7 +106,7 @@
               The Solution
             </h4>
             <div>
-              <strong>I trained a deep convolutional neural network (CNN or convnet), a particular method of machine learning, to count the number of cars in an image of a parking lot.</strong> I took this approach at the suggestion of my faculty advisor because 1.) viewed from above, parking lots and circuit boards containing ICs share a similar structure; 2.) there are, to our knowledge, no large datasets of circuit boards, while the ~12,000 sample parking lot dataset we found was ready to use; and 3.) I wanted to have some fun with convnets!
+              <strong>I trained a deep convolutional neural network (CNN or convnet), a particular method of machine learning (deep learning, more specifically), to count the number of cars in an image of a parking lot.</strong> I took this approach at the suggestion of my faculty advisor because 1.) viewed from above, parking lots and circuit boards containing ICs share a similar structure; 2.) there are, to our knowledge, no large datasets of circuit boards, while the ~12,000 sample parking lot dataset we found was ready to use; and 3.) I wanted to have some fun with convnets!
             </div>
           </div>
           <div class="col-sm-4">
@@ -139,13 +139,38 @@
                 <div class="row">
                   <div class="col-sm-12">
 
-                    <p>In research conducted by Cazamias and Marek at Stanford University, the authors attempted to count the number of empty parking spaces in images of parking lots. They did this in two ways, the second of which would be the basis for my attempt at counting cars instead; here they trained a CNN on 70%/20%/10% train/test/validation split of 12,417 images of parking lots to yield a model achieving an accuracy of about 81%. The images of the parking lots consisted of three different camera angles of two different parking lots. Each was labeled with the number of cars present.
+                    <p>In <a href="http://cs231n.stanford.edu/reports/2016/pdfs/280_Report.pdf" target="_blank">research conducted by Cazamias and Marek</a> at Stanford University, the authors attempted to count the number of empty parking spaces in images of parking lots. They did this in two ways, the second of which would be the basis for my attempt at counting cars instead; here they trained a CNN on 70%/20%/10% train/test/validation split of <a href="http://www.inf.ufpr.br/lesoliveira/download/pklot-readme.pdf" target="_blank">12,417 images of parking lots</a> to yield a model achieving an accuracy of about 81%. The images of the parking lots consisted of three different camera angles of two different parking lots. Each was labeled with the number of cars present.
                     </p>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="text-center center-pic">
+                    <img src="img/parkinglots.png" alt="connectrix graph">
+                    <div class="col-sm-8 col-sm-offset-2 img-tag">
+                      <small>Image from the dataset publication by Almedia et. al.: "Images captured under different weather conditions: (a) sunny (b) overcast, and (c) rainy from UFPR04; (d) sunny (e) overcast, and (f) rainy from UFPR05; and (g) sunny (h) overcast, and (i) rainy from PUCPR"</small>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-sm-12">
 
                     <p>The CNN, which I reconstructed from scratch in TensorFlow/Keras, was composed of 3 convolutional layers of depths 10, 20, and 30 nodes respectively. A 5 x 5 kernal was used at each convolutional layer, and each was followed with batch normalization, a ReLU activation function, then max pooling of size 2 x 2. After these three layers, the input was flattened and fed to three fully connected layers of size 30, 20, and 10 respectively with ReLU activations after each. A softmax layer was used to classify a "count" of the number of empty spaces or cars. in their research they classified between 0 and 20 empty spaces, saying that anything over 20 empty spaces would matter in application since it would be easy to find a parking spot; however, my research used classes between 0 and 100 since there were no images in which the number of cars exceeded 100. This, I'll reason, could be why my accuracy was much lower than theirs on their problem.</p>
                   </div>
 
                 </div>
+
+                <div class="row">
+                  <div class="text-center center-pic">
+                    <img src="img/model_architecture.png" alt="connectrix graph">
+                    <div class="col-sm-8 col-sm-offset-2 img-tag">
+                      <small>Image of the convolutional neural network architecture by Cazamias and Marek. Layer depths were 10, 20, 30, 30, 20, and 10 respectively (with 5 x 5 convolution windows). This image depicts the input being a single parking space/car, however for my problem, the entire parking lot image was used.</small>
+                    </div>
+                  </div>
+                </div>
+
+
               </div>
 
 
@@ -154,7 +179,7 @@
                 Technologies
               </h3>
               <div>
-                My favorite part of the project was learning and using cutting edge technologies. I started off using TensorFlow directly on my laptop. I did use my GPU, but it ate up the resources and took about 10-15 minutes to train the models. Then I got access to FutureSystems, a cloud computing service associated with our univesrity. I trained on an NVidia Tesla K80, which reduced training time to less than 5 minutes and freed up my machine to do other things. This came in very handy when training and retraining for cross validation. Eventually, a colleague told me about Keras, a library that sits on top of TensorFlow, which I tried and loved. It made the CNN building and tinkering much easier and intuitive.
+                My favorite part of the project was learning about and using cutting edge technologies. I started off using TensorFlow directly on my laptop. I did use my GPU, but it ate up the resources and took about 10-15 minutes to train the models. Then I got access to FutureSystems, a cloud computing service associated with our university. I trained on an NVidia Tesla K80, which reduced training time to less than 5 minutes and freed up my machine to do other things. This came in very handy when training and retraining for cross validation. Eventually, a colleague told me about Keras, a library that sits on top of TensorFlow, which I tried and loved. It made the CNN building and tinkering much easier and intuitive.
               </div>
             </div>
 
@@ -198,7 +223,7 @@
                   <div class="text-center center-pic">
                     <img src="img/distribution_labels.png" alt="connectrix graph">
                     <div class="col-sm-8 col-sm-offset-2 img-tag">
-                      <small><strong>Distribution of Number of Cars Accross Samples According to Labels</strong>: The distribution of the number of cars in the full dataset was skewed toward 0, i.e. many photos had either 0 cars. But with the range of classification much wider (the model predicted from 0 to 100 cars), the probability of 0 cars was less than 25% for a given photo.</small>
+                      <small><strong>Distribution of Number of Cars Accross Samples According to Labels</strong>: The distribution of the number of cars in the full dataset was skewed toward 0, i.e. many photos had 0 or few cars. But with the range of classification much wider (the model predicted from 0 to 100 cars), the probability of 0 cars was less than 25% for a given photo.</small>
                     </div>
                   </div>
                   <div class="text-center center-pic">

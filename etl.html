@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Jacob Beauchamp</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/landing-page.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top topnav" role="navigation">
+        <div class="container topnav">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand topnav" href="index.html">Jacob Beauchamp</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="projects.html">Projects</a>
+                    </li>
+                    <li>
+                        <a href="Resume_JacobBeauchamp_2017-03-18_PDF.pdf">Resume</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+
+    <!-- Header -->
+    <div class="banner-other">
+
+        <div class="container">
+
+            <div class="row">
+              <div class="text-center">
+                <h2>Reverse Engineering ETL: Healthcare Databases</h2>
+                <h3>Porting data from legacy applications to an archive web app</h3>
+              </div>
+            </div>
+
+        </div>
+        <!-- /.container -->
+
+    </div>
+    <!-- /.banner -->
+
+    <!-- Page Content -->
+
+
+  <div class="content-section-b">
+
+    <div class="container text-section">
+      <div class="col-sm-10 col-sm-offset-1">
+        <h2 class="page-header">
+          About
+        </h2>
+        <div class="row">
+          <div class="col-sm-8">
+            <h4>
+              The Problem
+            </h4>
+            <div>
+              <p>Healthcare providers store a lot of data. Whether it's financial or medical data, it's extremely important that this data is private and secure and can be accessed when needed. In fact, there are many regulations regarding how long a company must retain many types of data. It's also a good idea to have the records on hand in case of any legal needs down the road. However, due to licensing contracts established between healthcare providers and healthcare software companies, the data can become expensive to retain even after the licensed party no longer actively uses the software except to store the data.</p>
+            </div>
+
+            <h4>
+              The Solution
+            </h4>
+            <div>
+              <p><strong>As a database analyst intern for Harmony Healthcare IT, a company specializing in healthcare data ETL (extract, transform, load) processes, I helped by porting data from legacy healthcare systems to a database that could be accessed by our company's product, the Health Data Archiver.</strong> This consisted of three main steps: 1.) I found the required data points in the database (all of the ones I had worked on had been Microsoft SQL Server DBMSes), then 2.) I created SQL views to access those data points and transformed them to a format that could be read by our Health Data Archiver application, and fianlly 3.) I extracted the data by creating new tables from those views and loading it to a PostgreSQL database and formated the Health Data Archiver to read from that new database. This allowed our customers to access the data from the Health Data Archiver, a web app, whenever they needed it, and stop paying for the expensive licenses and services associated with the previous legacy healthcare systems.
+              </p>
+              <p>On top of all this, I got to experience what it's like to work with lots of regulations surrounding security and privacy (e.g. HIPAA), enterprise cloud systems and data storage, and working with a team in a professional setting.</p>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="btn-vert-block">
+              <a href="https://www.harmonyhit.com/blog/2016/08/15/interns-jump-in-and-thrive-at-harmony-healthcare-it/" target="_blank" type="button" class="btn btn-primary btn-block">HHIT Blog Post</a>
+              <ul class=" list-group lead btn-block text-center">
+                <li class="list-group-item"><strong>Technologies</strong></li>
+                <li class="list-group-item"><a href="https://en.wikipedia.org/wiki/SQL" target="_blank">SQL</a></li>
+                <li class="list-group-item"><a href="https://docs.microsoft.com/en-us/sql/t-sql/language-reference" target="_blank">T-SQL</a></li>
+                <li class="list-group-item"><a href="https://www.postgresql.org/docs/9.6/static/plpgsql.html" target="_blank">PL/pgSQL</a></li>
+                <li class="list-group-item"><a href="https://www.python.org/" target="_blank">Python</a></li>
+                <li class="list-group-item"><a href="http://www.pentaho.com/" target="_blank">Pentaho</a></li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+        <div class="row">
+
+          <div class="col-sm-12">
+
+
+            <h2 class="page-header">The ETL Proccess</h2>
+            <div class="sub-section">
+              <h3>
+                Extract
+              </h3>
+              <div>
+                <div class="row">
+                  <div class="col-sm-12">
+
+                    <p>After the systems analysts gained access to the healthcare system's database and made it possible for us to query it, they would pass it along to the database analysts, my role. From here I would look at what data was required; this was documented in a spreadsheet created by the business analysts and contained screenshots of the legacy system's GUI as well as some descriptive text. Then I would query the database to gain a sense of the structure of the relationships between tables. Often, it was very helpful to find the table containing the Patient Id numbers because all the other data was related to that.
+                    </p>
+                  </div>
+                </div>
+
+              <h3>
+                Transform
+              </h3>
+              <div>
+                As I would find datapoints, I would create views around the required columns. For example, if patient information was spread about on different tables, but it made more sense to archive it on one table, I would create a view for that. This was based upon what made it easiest for our application, the Health Data Archiver, to read the data. The tool used for the extract and transform processes was SQL Server Management Studio.
+              </div>
+
+
+              <h3>
+                Load
+              </h3>
+              <div>
+                With all of the views created, I would then use Pentaho to create a transformation pipeline that told each datapoint where to go in the new, archive database. Running this job would copy all of that data. As was usually the case, and was for each of the projects I worked on, this ported data from MS SQL Server to a PostgreSQL DBMS. I would then format the Health Data Archiver to pull from this new, archive database. In the end it would look at work very similar to the old, legacy healthcare system but in a read-only manner.
+              </div>
+
+              <div class="row">
+                <div class="text-center center-pic">
+                  <img src="img/etl_pic.png" alt="connectrix graph">
+                  <div class="col-sm-8 col-sm-offset-2 img-tag">
+                    <small>The Data Team at Harmony Healthcare IT during our morning standup meeting.</small>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <h2 class="page-header">Special Projects</h2>
+            <div class="sub-section">
+              <h3>
+                Parsing with Python
+              </h3>
+              <div>
+                <div class="row">
+                  <div class="col-sm-12">
+                    <p>Sometimes there would unstructured data (in that it wasn't in rows and columns)  that we would have to store. This may have been contained in PDF files, HTML files, Rich Text Format, XML, JSON, etc. One of my collegues was having some issues with a large number of HTML files that had been extracted. First, there was a long string of random text inserted that wasn't supposed to be on the document, and second, there were several image tags that were not formated correctly. He could have went through and changed tens of thousands of these all by hand, but we had Python on our side. I created a script utilizing the BeautifulSoup HTML parser library to remove the string of text and reformat the image tag. As it was run on so many files, it saved countless hours of work and made for a happy colleague and happy customer. Additionally, I taught my colleague, a full-time employee, how to use the script and modify it for future use.
+                    </p>
+                  </div>
+                </div>
+
+              </div>
+              <h3>
+                Programming with PL/pgSQL
+              </h3>
+              <div>
+                <div class="row">
+                  <div class="col-sm-12">
+                    Our Manager of ETL and Data Services often had to do maintenence on the databases store on our servers. She needed a way to remove existing database with a single script. She did this line by line for some time, but I came up with a way using PL/pgSQL to generate a script for her to run in one shot. This saved her a lot of time and was a way for me to learn more about developing with SQL including using dynamic SQL.
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="text-center center-pic">
+                    <img src="img/distribution_labels.png" alt="connectrix graph">
+                    <div class="col-sm-8 col-sm-offset-2 img-tag">
+                      <small><strong>Distribution of Number of Cars Accross Samples According to Labels</strong>: The distribution of the number of cars in the full dataset was skewed toward 0, i.e. many photos had either 0 cars. But with the range of classification much wider (the model predicted from 0 to 100 cars), the probability of 0 cars was less than 25% for a given photo.</small>
+                    </div>
+                  </div>
+                  <div class="text-center center-pic">
+                    <img src="img/distribution_predictions.png" alt="connectrix graph">
+                    <div class="col-sm-8 col-sm-offset-2 img-tag">
+                      <small><strong>Distribution of Number of Cars Accross Samples According to Classification by the Trained Model</strong>: Here the distribution of classifications resembles the actual distribution. Interesting spikes occur at around 72, 90, and 95 cars, where the model was biased towards those numbers instead of spreading things out.</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+          </div>
+
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+</div>
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <ul class="list-inline">
+                        <li>
+                            <a href="index.html">Home</a>
+                        </li>
+                        <li class="footer-menu-divider">&sdot;</li>
+                        <li>
+                            <a href="projects.html">Projects</a>
+                        </li>
+                        <li class="footer-menu-divider">&sdot;</li>
+                        <li>
+                            <a href="resume">Resume</a>
+                        </li>
+                    </ul>
+                    <p class="copyright text-muted small">Created by Jacob Beauchamp 2017</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
