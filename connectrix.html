@@ -101,7 +101,7 @@
             <div>
               <p>The <a href="http://quantifiedself.com/" target="_blank">Quantified Self</a> community is a group of people who track and analyze their lives to gain insight, most often to aid in decision making towards achieving goals -- think counting calories to lose weight. Data from multiple sources can lead to even greater insight.</p>
               <p>
-              While platforms for aggregating personal data exist, two limiting factors arise: 1.) The platform takes charge of the analytics and, due to human resource limitations, only offers a narrow scope of "one-size-fits-all" analyses; or 2.) the platform outsources the analytics to a community of developers, BUT gives them the personal data, reducing privacy and increasing risk for the user.</p>
+              While platforms for aggregating personal data exist, two limiting factors arise: 1.) The platform takes charge of the analytics and, due to human resource limitations, can only offer a narrow scope of "one-size-fits-all" analyses; or 2.) the platform outsources the analytics to a community of developers, BUT gives them the personal data, reducing privacy and increasing risk for the user.</p>
 
 
             </div>
@@ -110,7 +110,7 @@
               The Solution
             </h4>
             <div>
-              <strong>Connectrix is a platform for personal data analytics that connects personal data sources in the cloud to analytics apps created by a community of developers.</strong> Here's how it solves the problems mentioned above: 1.) By shifting the creation of analytics apps to a community of developers, users can access all kinds of analyses to find ones that suit their needs. 2.) Instead of giving the data to these developers, the analysees are run on Connectrix servers increasing user privacy and reducing risk. Connectrix also makes it super easy for developers to create and publish these analyses.
+              <strong>Connectrix is a platform for personal data analytics that connects personal data sources in the cloud to analytics apps created by a community of developers.</strong> As the picture below depicts, Connectrix pulls in the data and the apps via APIs and runs the apps on our servers, eliminating the need to give app developers access to a user's personal data. In reference to the problems above: 1.) By shifting the creation of analytics apps to a community of developers, users can access all kinds of analyses to find ones that suit their needs. Connectrix also makes it super easy for developers to create and publish these analyses. 2.) As mentioned, privacy risk is reduced by running the apps on Connectrix servers.
             </div>
           </div>
           <div class="col-sm-4">
@@ -155,7 +155,7 @@
                 Using Connectrix Apps
               </h3>
               <div>
-                When connections have been established, the user may begin using analyses available on the <a href="https://connectrix-dev.herokuapp.com/appStore" target="_blank">Connectrix App Store</a>. When a user finds an app they want to use, they add it to their favorites. Then when they wish to run it (and only then), Connectrix fetches the data via APIs, fetches the program from Github, and runs the data through the program on the Connectrix server. The output is then passed to the client and injected into the webpage for the user's viewing. See "The Process of Running a Connectrix App" below for more details. The user's Dashboard lists their connections and favorite apps.
+                After connections have been established, the user may begin using analyses available on the <a href="https://connectrix-dev.herokuapp.com/appStore" target="_blank">Connectrix App Store</a>. When a user finds an app they want to use, they add it to their favorites. Then when they wish to run it (and only then), Connectrix fetches the data via APIs, fetches the program from Github, and runs the data through the program on the Connectrix server. The output is then passed to the client and injected into the webpage for the user's viewing. See "The Process of Running a Connectrix App" below for more details. The user's Dashboard lists their connections and favorite apps.
               </div>
             </div>
 
@@ -171,11 +171,9 @@
                 Developing and Testing Connectrix Apps
               </h3>
               <div>
-                <p>The entire process of developing, testing, and publishing a "Hello, world" Connectrix app is detailed in the <a href="https://connectrix-dev.herokuapp.com/developers/developerGuide" target="_blank">Developer Guide</a>. But in general, creates a new app simply by specifying a name and description, selecting the connections required for the app, and pointing Connectrix to a public Github repository where the application is to be stored.</p>
+                <p>The entire process of developing, testing, and publishing a "Hello, world" Connectrix app is detailed in the <a href="https://connectrix-dev.herokuapp.com/developers/developerGuide" target="_blank">Developer Guide</a>. But in general, a developer creates a new app by simply specifying a name and description, selecting the connections required for the app, and pointing Connectrix to a public Github repository where the application is to be stored.</p>
                 <p>At this point, the developer can begin writing a Python program that accepts data, processes it, and returns HTML with embedded CSS and JavaScript. When the app is run, the user's data will be fed into the Python program, processed, and the output will be passed to the client and injected into the webpage for the user to view.</p>
-                <p>You may be wondering how a developer can test such a program with only a guess of what the user's data will look like. To handle this, Connectrix provides a test engine in the form of a Node.js app to be run locally. This test engine runs a program exactly how Connectrix would on the server, except it does not fetch data from the web; rather, it pulls in example data from a JSON file. Output is written to an HTML file that the developer can open in a browser to see exactly what the app will look like when a user runs it in the live environment. Additionally, the developer may fetch their own live data with functionality on the Connectrix site. This is returned as JSON, which can be copied/pasted into the JSON file that the test engine pulls from.</p>
-
-
+                <p>You may be wondering how a developer can test such a program with only a guess of what the user's data will look like. Essentially, they use their own data and test locally on their machine. Having specified the required data connections, they can click a "View JSON" button to see their own actual data received from the APIs in the format that will be fed to their app. Further, Connectrix provides a test engine to test their app locally. After downloading the test engine (a Node.js app), they copy and paste their example JSON into a view.json file and the engine will run their program with their data in the same way that Connectrix would run their program in the online environment. Output is written to an HTML file that the developer can open in a browser to see exactly what the app will look like. When they're done testing, they publish the app by simply pushing the files to their Github repository.</p>
               </div>
             </div>
 
@@ -185,9 +183,9 @@
                 Retrieving User Data
               </h3>
               <div>
-                <p>When a user wishes to run an app, a request is made to the Connectrix server with information of the user who made the request and which app they'd like to use. On the server, "Data Getters" are compiled according to the app's required connections and specific third party API enpoints, and they contain the necessary credentials of the user for retrieving the data. These Data Getters are JavaScript functions returning Promises and are run simultaneously with the <code>Promise.all()</code> method.</p>
+                <p>When a user wishes to run an app, a request is made to the Connectrix server with information of the user who made the request and which app they'd like to use. On the server, "Data Getters" are compiled according to the app's required connections and specific third party API endpoints, and they contain the necessary credentials of the user for retrieving the data. These Data Getters are JavaScript functions returning Promises and are run simultaneously with the <code>Promise.all()</code> method.</p>
 
-                <p>However, it is a bit more complex than that; the logic can be thought of as being two levels deep. The top level compiles Data Getters <em>by third party API <u>provider</u></em> (Fitbit, Moves, YouTube), and the lower level compiles Data Getters <em>by third party API <u>endpoint</u></em> (Fitbit - Body Weight Time Series, Fitbit - Calories Burned, etc.). This is to account for error handling at the lower level. For instance, if a request is made to the Fitbit API but the access token used had been expired, the error is caught and handled at the Fitbit level (reading the error in the Fitbit response, refreshing the access token according to Fitbit standards, storing it to the database). Then the API call for data is made again recursively (within limits) in the error handler. This way, each provider may use and reuse their own error handling code, calls for data are not rendundant, and everything runs asynchronously.</p>
+                <p>However, it is a bit more complex than that; the logic can be thought of as being two levels deep. The top level compiles Data Getters <em>by third party API <u>provider</u></em> (Fitbit, Moves, YouTube), and the lower level compiles Data Getters <em>by third party API <u>endpoint</u></em> (Fitbit - Body Weight Time Series, Fitbit - Calories Burned, etc.). This is to account for error handling at the lower level. For instance, if a request is made to the Fitbit API but the access token used had been expired, the error is caught and handled at the Fitbit level (reading the error in the Fitbit response, refreshing the access token according to Fitbit standards, storing it to the database). Then the API call for data is made again recursively (within limits) in the error handler. This way, each provider may use and reuse their own error handling code, calls for data are not redundant, and everything runs asynchronously.</p>
 
                 <p>See the the <code>runApp</code> function in the <a href="https://github.com/jake17007/PersonalDataWebApp/blob/production/server/api/analysis/analysis.controller.js#L282" target="_blank">source code</a> to begin the journey down the rabbit hole.</p>
               </div>
@@ -204,7 +202,7 @@
                 Passing Data to an App
               </h3>
               <div>
-                After cloning the program to the server and retrieving the user's data, Connectrix spawns a child process (initiating a pre-named <code>app.py</code> main file) with the <a href="https://www.npmjs.com/package/python-shell" target="_blank">python-shell</a> Node module. This makes it easy to run and listen for data or errors from the Python program. Data is passed to the Python program's stdin stream and received stdout or stderr (most easily a <code>print</code> statement).
+                After cloning the program to the server and retrieving the user's data, Connectrix spawns a child process (initiating a pre-named <code>app.py</code>  main file) with the <a href="https://www.npmjs.com/package/python-shell" target="_blank">python-shell</a> Node module. This makes it easy to run and listen for data or errors from the Python program. Data is passed to the Python program's stdin stream and received stdout or stderr (most easily a <code>print</code> statement).
               </div>
 
               <h3>
@@ -235,20 +233,20 @@
             <h2 class="page-header">Security</h2>
             <div class="sub-section">
               <div>
-                One of the biggest concerns for this application is security. As a centralized trusted-third-party, Connectrix acts as a safe place to process data. However, at this stage, there two vulverabilities in particular where data could be leaked to another party or other malicious activity could occur.
+                One of the biggest concerns for this application is security. As a centralized trusted-third-party, Connectrix acts as a safe place to process data. However, at this stage, there two vulnerabilities in particular where data could be leaked to another party or other malicious activity could occur.
               </div>
               <h3>
                 Malicious Python Script
               </h3>
               <div>
-                Currently, the app software is pulled in from Github and built on the Connectrix server -- the same server that runs the Connectrix app. This could be bad for two reasons. First, it could access any part of the filesystem that any other script could and distrupt the application or pull from the database. Second, it could fairly easily send the user's data across the network. To prevent this, the software could instead be built in a virtual machine with no access to the filesystem, and on top of that, in a sandbox that had no network capabilities. I have considered creating such an environment on an Amazon EC2 instance and using the <a href="http://pypy.org/" target="_blank">PyPy</a> sandbox.
+                Currently, the app software is pulled in from Github and built on the Connectrix server -- the same server that runs the Connectrix app. This could be bad for two reasons. First, it could access any part of the filesystem that any other script could and disrupt the application or pull from the database. Second, it could fairly easily send the user's data across the network. To prevent this, the software could instead be built in a virtual machine with no access to the filesystem, and on top of that, in a sandbox that had no network capabilities. I have considered creating such an environment on an Amazon EC2 instance and using the <a href="http://pypy.org/" target="_blank">PyPy</a> sandbox.
               </div>
 
               <h3>
                 Malicious Output
               </h3>
               <div>
-                Another vulnerability lies in the fact that the app output is injected into the client application. This means that a malicious JavaScript function could run and access the AngularJS application. Or it could send the user's data accross the network. The combat this, I've considered using and iFrame with restrictions to the network.
+                Another vulnerability lies in the fact that the app output is injected into the client application. This means that a malicious JavaScript function could run and access the AngularJS application. Or it could send the user's data across the network. The combat this, I've considered using an iFrame with restrictions to the network.
               </div>
             </div>
           </div>

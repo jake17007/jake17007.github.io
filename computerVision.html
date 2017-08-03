@@ -99,14 +99,14 @@
               The Problem
             </h4>
             <div>
-              <p>As undergraduate participants of Indiana University Computer Vision Lab, we were tasked with discovering ways to combat the problem identifying counterfeit integrated circuits (ICs). Counterfeit ICs are essentially electronics that are made to look and act like regular ICs, but may be less expensive to produce or even contain malicious components. One of the ways to find conterfeit ICs it to simply count the number of ICs on a circuit board and compare that number to what it should be. However, this is extremely time consuming.</p>
+              <p>As undergraduate participants of the Indiana University Computer Vision Lab, we were tasked with discovering ways to combat the problem identifying counterfeit integrated circuits (ICs). Counterfeit ICs are essentially electronics that are made to look and act like regular ICs, but may be less expensive to produce or even contain malicious components. One of the ways to find counterfeit ICs it to simply count the number of ICs on a circuit board and compare that number to what it should be. However, this is extremely time consuming to do manually with the human eye.</p>
             </div>
 
             <h4>
               The Solution
             </h4>
             <div>
-              <strong>I trained a deep convolutional neural network (CNN or convnet), a particular method of machine learning (deep learning, more specifically), to count the number of cars in an image of a parking lot.</strong> I took this approach at the suggestion of my faculty advisor because 1.) viewed from above, parking lots and circuit boards containing ICs share a similar structure; 2.) there are, to our knowledge, no large datasets of circuit boards, while the ~12,000 sample parking lot dataset we found was ready to use; and 3.) I wanted to have some fun with convnets!
+              <strong>I trained a deep convolutional neural network (CNN or convnet), a particular method of machine learning (deep learning, specifically), to count the number of cars in an image of a parking lot.</strong> I took this approach at the suggestion of my faculty advisor because 1.) viewed from above, parking lots and circuit boards containing ICs share a similar structure; 2.) there are, to our knowledge, no large datasets of circuit boards, while the ~12,000 sample parking lot dataset we found was ready to use; and 3.) I wanted to have some fun learning about convnets!
             </div>
           </div>
           <div class="col-sm-4">
@@ -156,7 +156,7 @@
                 <div class="row">
                   <div class="col-sm-12">
 
-                    <p>The CNN, which I reconstructed from scratch in TensorFlow/Keras, was composed of 3 convolutional layers of depths 10, 20, and 30 nodes respectively. A 5 x 5 kernal was used at each convolutional layer, and each was followed with batch normalization, a ReLU activation function, then max pooling of size 2 x 2. After these three layers, the input was flattened and fed to three fully connected layers of size 30, 20, and 10 respectively with ReLU activations after each. A softmax layer was used to classify a "count" of the number of empty spaces or cars. in their research they classified between 0 and 20 empty spaces, saying that anything over 20 empty spaces would matter in application since it would be easy to find a parking spot; however, my research used classes between 0 and 100 since there were no images in which the number of cars exceeded 100. This, I'll reason, could be why my accuracy was much lower than theirs on their problem.</p>
+                    <p>The CNN, which I reconstructed from scratch in TensorFlow/Keras, was composed of 3 convolutional layers of depths 10, 20, and 30 nodes respectively. A 5 x 5 kernel was used at each convolutional layer, and each was followed with batch normalization, a ReLU activation function, then max pooling of size 2 x 2. After these three layers, the input was flattened and fed to three fully connected layers of size 30, 20, and 10 respectively with ReLU activations after each. A softmax layer was used to classify a "count" of the number of empty spaces or cars. in their research they classified between 0 and 20 empty spaces, saying that anything over 20 empty spaces would matter in application since it would be easy to find a parking spot; however, my research used classes between 0 and 100 since there were no images in which the number of cars exceeded 100. This, I'll reason, could be why my accuracy was much lower than theirs on their problem.</p>
                   </div>
 
                 </div>
@@ -202,7 +202,7 @@
                   <div class="text-center center-pic">
                     <img src="img/parkinglot.png" alt="connectrix graph">
                     <div class="col-sm-8 col-sm-offset-2 img-tag">
-                      <small>Only cars in the bounded areas were counted. For example, this image was labled to contain 0 cars even though there are obviously 2 present. Therefore, cropping to these cardinal bounds removed much of the noise from the other cars. All images consisted of two parking lots, one of which had two different camera angles. Coordinates of spaces counted were included in the dataset documentation.</small>
+                      <small>Only cars in the bounded areas were counted. For example, this image was labeled to contain 0 cars even though there are obviously 2 present. Therefore, cropping to these cardinal bounds removed much of the noise from the other cars. All images consisted of two parking lots, one of which had two different camera angles. Coordinates of spaces counted were included in the dataset documentation.</small>
                     </div>
                   </div>
                 </div>
@@ -214,8 +214,8 @@
               <div>
                 <div class="row">
                   <div class="col-sm-12">
-                    <p>I used ten interations of Monte Carlo Cross Validation to validate these results. The standard deviation among trials was low.</p>
-                    <p>With the cropped photo method detailed above, I graphed the following frequencies of car count labels and car count predictions using the trained model in order to visualize their distributions. I'd say they are faily similar, enough to conclude that the model wasn't just guessing and getting lucky.</p>
+                    <p>I used ten iterations of Monte Carlo Cross Validation to validate these results. The standard deviation among trials was low.</p>
+                    <p>With the cropped photo method detailed above, I graphed the following frequencies of car count labels and car count predictions using the trained model in order to visualize their distributions. I'd say they are fairly similar, enough to conclude that the model wasn't just guessing and getting lucky.</p>
                   </div>
                 </div>
 
@@ -223,13 +223,13 @@
                   <div class="text-center center-pic">
                     <img src="img/distribution_labels.png" alt="connectrix graph">
                     <div class="col-sm-8 col-sm-offset-2 img-tag">
-                      <small><strong>Distribution of Number of Cars Accross Samples According to Labels</strong>: The distribution of the number of cars in the full dataset was skewed toward 0, i.e. many photos had 0 or few cars. But with the range of classification much wider (the model predicted from 0 to 100 cars), the probability of 0 cars was less than 25% for a given photo.</small>
+                      <small><strong>Distribution of Number of Cars Across Samples According to Labels</strong>: The distribution of the number of cars in the full dataset was skewed toward 0, i.e. many photos had 0 or few cars. But with the range of classification much wider (the model predicted from 0 to 100 cars), the probability of 0 cars was less than 25% for a given photo.</small>
                     </div>
                   </div>
                   <div class="text-center center-pic">
                     <img src="img/distribution_predictions.png" alt="connectrix graph">
                     <div class="col-sm-8 col-sm-offset-2 img-tag">
-                      <small><strong>Distribution of Number of Cars Accross Samples According to Classification by the Trained Model</strong>: Here the distribution of classifications resembles the actual distribution. Interesting spikes occur at around 72, 90, and 95 cars, where the model was biased towards those numbers instead of spreading things out.</small>
+                      <small><strong>Distribution of Number of Cars Across Samples According to Classification by the Trained Model</strong>: Here the distribution of classifications resembles the actual distribution. Interesting spikes occur at around 72, 90, and 95 cars, where the model was biased towards those numbers instead of spreading things out.</small>
                     </div>
                   </div>
                 </div>

@@ -106,7 +106,7 @@
               The Solution
             </h4>
             <div>
-              <p><strong>As a database analyst intern for Harmony Healthcare IT, a company specializing in healthcare data ETL (extract, transform, load) processes, I helped by porting data from legacy healthcare systems to a database that could be accessed by our company's product, the Health Data Archiver.</strong> This consisted of three main steps: 1.) I found the required data points in the database (all of the ones I had worked on had been Microsoft SQL Server DBMSes), then 2.) I created SQL views to access those data points and transformed them to a format that could be read by our Health Data Archiver application, and fianlly 3.) I extracted the data by creating new tables from those views and loading it to a PostgreSQL database and formated the Health Data Archiver to read from that new database. This allowed our customers to access the data from the Health Data Archiver, a web app, whenever they needed it, and stop paying for the expensive licenses and services associated with the previous legacy healthcare systems.
+              <p><strong>As a database analyst intern for Harmony Healthcare IT, a company specializing in healthcare data ETL (extract, transform, load) processes, I helped by porting data from legacy healthcare systems to a database that could be accessed by our company's product, the Health Data Archiver.</strong> This consisted of three main steps: 1.) I found the required data points in the database (all of the ones I had worked on had been Microsoft SQL Server DBMSes), then 2.) I created SQL views to access those data points and transformed them to a format that could be read by our Health Data Archiver application, and finally 3.) I extracted the data by creating new tables from those views and loading it to a PostgreSQL database and formatted the Health Data Archiver to read from that new database. This allowed our customers to access the data from the Health Data Archiver, a web app, whenever they needed it, and stop paying for the expensive licenses and services associated with the previous legacy healthcare systems.
               </p>
               <p>On top of all this, I got to experience what it's like to work with lots of regulations surrounding security and privacy (e.g. HIPAA), enterprise cloud systems and data storage, and working with a team in a professional setting.</p>
             </div>
@@ -131,7 +131,7 @@
           <div class="col-sm-12">
 
 
-            <h2 class="page-header">The ETL Proccess</h2>
+            <h2 class="page-header">The ETL Process</h2>
             <div class="sub-section">
               <h3>
                 Extract
@@ -179,7 +179,7 @@
               <div>
                 <div class="row">
                   <div class="col-sm-12">
-                    <p>Sometimes there would unstructured data (in that it wasn't in rows and columns)  that we would have to store. This may have been contained in PDF files, HTML files, Rich Text Format, XML, JSON, etc. One of my collegues was having some issues with a large number of HTML files that had been extracted. First, there was a long string of random text inserted that wasn't supposed to be on the document, and second, there were several image tags that were not formated correctly. He could have went through and changed tens of thousands of these all by hand, but we had Python on our side. I created a script utilizing the BeautifulSoup HTML parser library to remove the string of text and reformat the image tag. As it was run on so many files, it saved countless hours of work and made for a happy colleague and happy customer. Additionally, I taught my colleague, a full-time employee, how to use the script and modify it for future use.
+                    <p>Sometimes there would unstructured data (in that it wasn't in rows and columns)  that we would have to store. This may have been contained in PDF files, HTML files, Rich Text Format, XML, JSON, etc. One of my colleagues was having some issues with a large number of HTML files that had been extracted. First, there was a long string of random text inserted that wasn't supposed to be on the document, and second, there were several image tags that were not formated correctly. He could have went through and changed tens of thousands of these all by hand, but we had Python on our side. I created a script utilizing the BeautifulSoup HTML parser library to remove the string of text and reformat the image tag. As it was run on so many files, it saved countless hours of work and made for a happy colleague and happy customer. Additionally, I taught my colleague, a full-time employee, how to use the script and modify it for future use.
                     </p>
                   </div>
                 </div>
@@ -191,24 +191,10 @@
               <div>
                 <div class="row">
                   <div class="col-sm-12">
-                    Our Manager of ETL and Data Services often had to do maintenence on the databases store on our servers. She needed a way to remove existing database with a single script. She did this line by line for some time, but I came up with a way using PL/pgSQL to generate a script for her to run in one shot. This saved her a lot of time and was a way for me to learn more about developing with SQL including using dynamic SQL.
+                    Our Manager of ETL and Data Services often had to do maintenance on the databases store on our servers. She needed a way to remove existing database with a single script. She did this line by line for some time, but I came up with a way using PL/pgSQL to generate a script for her to run in one shot. This saved her a lot of time and was a way for me to learn more about developing with SQL including using dynamic SQL.
                   </div>
                 </div>
 
-                <div class="row">
-                  <div class="text-center center-pic">
-                    <img src="img/distribution_labels.png" alt="connectrix graph">
-                    <div class="col-sm-8 col-sm-offset-2 img-tag">
-                      <small><strong>Distribution of Number of Cars Accross Samples According to Labels</strong>: The distribution of the number of cars in the full dataset was skewed toward 0, i.e. many photos had either 0 cars. But with the range of classification much wider (the model predicted from 0 to 100 cars), the probability of 0 cars was less than 25% for a given photo.</small>
-                    </div>
-                  </div>
-                  <div class="text-center center-pic">
-                    <img src="img/distribution_predictions.png" alt="connectrix graph">
-                    <div class="col-sm-8 col-sm-offset-2 img-tag">
-                      <small><strong>Distribution of Number of Cars Accross Samples According to Classification by the Trained Model</strong>: Here the distribution of classifications resembles the actual distribution. Interesting spikes occur at around 72, 90, and 95 cars, where the model was biased towards those numbers instead of spreading things out.</small>
-                    </div>
-                  </div>
-                </div>
               </div>
             </div>
 
