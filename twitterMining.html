@@ -64,7 +64,7 @@
         <!-- /.container -->
     </nav>
 
-    <div>
+
     <!-- Header -->
     <div class="banner-other">
 
@@ -72,7 +72,8 @@
 
             <div class="row">
               <div class="text-center">
-                <h2>Projects</h2>
+                <h2>Twitter Data Mining for Sentiment</h2>
+                <h3>Mining Twitter data for sentiment towards economic inquality</h3>
               </div>
             </div>
 
@@ -85,60 +86,47 @@
     <!-- Page Content -->
 
 
-  <div class="content-section-c">
+  <div class="content-section-b">
 
-    <div class="container">
-      <div class="col-md-10 col-md-offset-1">
-        <ul class="list-group">
-          <!-- Connectrix IoT Web App-->
-          <li class="list-group-item project-list-item clearfix">
-            <div class="col-xs-10">
-              <h3 class="section-heading"><a href="connectrix.html">Connectrix IoT Wep App</a></h3>
-              <p class="lead">A platform for secure, personal data aggregation and analysis</p>
-              <strong>Node.js, AngularJS, MongoDB, Express, Python</strong>
+    <div class="container text-section">
+      <div class="col-sm-10 col-sm-offset-1">
+        <h2 class="page-header">
+          About
+        </h2>
+        <div class="row">
+          <div class="col-sm-8">
+            <h4>
+              The Problem
+            </h4>
+            <div>
+              <p>Economic Inequality, also known as the wealth or income gap, is a growing concern that's associated with poverty, inequality of opportunity, and many other  issues ranging from social to environmental. Some research has shown that in societies of high economic inequality, an "envy up, scorn down" mentality bias exists, meaning that members look more negatively upon those of lower economic class and more positively upon those of higher economic class than would be the case in a society of lesser economic inequality. I wanted to see if this was true.</p>
             </div>
-            <div class="col-xs-2 alight-text-top text-right">
-              <small>Jul 14, 2017</small>
-            </div>
-          </li>
-          <!-- Machine Learning Computer Vision -->
-          <li class="list-group-item project-list-item clearfix">
-            <div class="col-xs-10">
-              <h3 class="section-heading"><a href="computerVision.html">Machine Learning & Computer Vision</a></h3>
-              <p class="lead">Training a deep convolutional neural network to count the number of cars in an image of a parking lot</p>
-              <strong>TensorFlow, Python</strong>
-            </div>
-            <div class="col-xs-2 alight-text-top text-right">
-              <small>May 5, 2017</small>
-            </div>
-          </li>
-          <!-- Reverse Engineering ETL Healthcare Databases -->
-          <li class="list-group-item project-list-item clearfix">
-            <div class="col-xs-10">
-              <h3 class="section-heading"><a href="etl.html">Reverse Engineering ETL: Healthcare Databases</a></h3>
-              <p class="lead">Porting data from legacy applications to an archive web app</p>
-              <strong>SQL, Python</strong>
-            </div>
-            <div class="col-xs-2 alight-text-top text-right">
-              <small>Aug 20, 2016</small>
-            </div>
-          </li>
-          <!-- Twitter Mining for Economic Inequality Sentiment -->
-          <li class="list-group-item project-list-item clearfix">
-            <div class="col-xs-10">
-              <h3 class="section-heading"><a href="twitterMining.html">Twitter Data Mining for Sentiment</a></h3>
-              <p class="lead">Mining Twitter data for sentiment towards economic inquality</p>
-              <strong>R, IBM Watson</strong>
-            </div>
-            <div class="col-xs-2 alight-text-top text-right">
-              <small>Dec 10, 2016</small>
-            </div>
-          </li>
 
-        </ul>
+            <h4>
+              The Solution
+            </h4>
+            <div>
+              <strong>To answer the question, I mined Twitter data to see how sentiment towards the rich and poor correlated with regions of high and low economic inequality.</strong> First, using the Twitter API, I collected over 2000 Tweets from regions in the U.S. of the 10 highest and 10 lowest economic inequality. This was measured by an index similar to the Gini Coefficient. The Tweets either contained words relating to high or low economic class like "rich," "affluent," "wealthy" or "poor," "broke," "cheap," etc. The Tweets were then analyzed with the IBM Watson text analysis API and given a sentiment score. The level of inequality by sentiment was measured as the range between the averages among positive sentiment for the rich and negative sentiment for the poor. Finally, a correlation test was performed against this measurement and the official measurement. In the end after various tests, results upheld the origin hypothesis.<br><br>
+              <p>See the <a href="https://docs.google.com/presentation/d/1vFWcXOFyVoMYxmpPJvk-wp5aAkK1Vg71v9UiJLuirWk/edit#slide=id.p4" target="_blank">PowerPoint presentation</a> for details.</p>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="btn-vert-block">
+              <a href="https://github.com/jake17007/TwitterMiningProject" target="_blank" type="button" class="btn btn-primary btn-block"><i class="fa fa-github fa-fw"></i> View Source Code</a>
+              <a href="https://docs.google.com/presentation/d/1vFWcXOFyVoMYxmpPJvk-wp5aAkK1Vg71v9UiJLuirWk/edit#slide=id.p4" target="_blank" type="button" class="btn btn-primary btn-block"><i class="fa fa-file-powerpoint-o fa-fw"></i> View PowerPoint Presentation</a>
+
+              <ul class=" list-group lead btn-block text-center">
+                <li class="list-group-item"><strong>Technologies</strong></li>
+                <li class="list-group-item"><a href="https://www.r-project.org/" target="_blank">R</a></li>
+                <li class="list-group-item"><a href="https://developer.ibm.com/watson/" target="_blank">IBM Watson</a></li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+        <!-- details would go here -->
       </div>
     </div>
-
   </div>
 
     <!-- Footer -->
