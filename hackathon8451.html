@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Jacob Beauchamp</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/landing-page.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top topnav" role="navigation">
+        <div class="container topnav">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand topnav" href="index.html">Jacob Beauchamp</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="projects.html">Projects</a>
+                    </li>
+                    <li>
+                        <a href="Resume_08-19-2017.pdf">Resume</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+
+    <!-- Header -->
+    <div class="banner-other">
+
+        <div class="container">
+
+            <div class="row">
+              <div class="text-center">
+                <h2>84.51&#176; Hackathon: Predicting Consumer Demand</h2>
+                <h3>Predicting consumer demand for products using Twitter sentiment analysis and regression</h3>
+              </div>
+            </div>
+
+        </div>
+        <!-- /.container -->
+
+    </div>
+    <!-- /.banner -->
+
+    <!-- Page Content -->
+
+
+  <div class="content-section-b">
+
+    <div class="container text-section">
+      <div class="col-sm-10 col-sm-offset-1">
+        <h2 class="page-header">
+          About
+        </h2>
+        <div class="row">
+          <div class="col-sm-8">
+            <h4>
+              The Problem
+            </h4>
+            <div>
+              <p>84.51&#176; is a data analytics company that focuses on retail, branding, customer relations, and similar domains. At a recent hackathon hosted by the company, it was said that having a way to predict consumer demand for certain products could help their clients -- retail stores like Kroger -- prepare their inventory for future demand increases or decreases. Buying items in bulk <em>before</em> demand goes up or scaling down the purchase of items <em> before</em> demand goes down would save money for these stores, who could pass on those savings to their customers. But how can demand be predicted in advance?</p>
+            </div>
+
+            <h4>
+              The Solution
+            </h4>
+            <div>
+              <strong>Our team decided to solve this problem of predicting consumer demand by analyzing Twitter tweets for sentiment towards certain products, identifying trends in sentiment over time, and predicting future trends using regression.
+              </strong> Our application allowed users to enter a word or phrase, e.g. "Kraft cheese," which would retrieve the latest tweets that contained that word/phrase via the Twitter API. Each tweet was given a sentiment score -- a number between -1 (negative sentiment) and 1 (postive sentiment). The tweets were then grouped by day, and their scores were added up. For example, if there were two tweets on January 11<sup>th</sup> that read "I love Kraft cheese," and "Kraft cheese is great," they would each receive positive sentiment scores -- say .7 and .8 -- and the scores would be added to yield a total sentiment score of 1.5 for the day. The "trend" was calculated by subtracting the previous day's sentiment score from the current day's score -- so a sentiment score of 2.6 on January 12<sup>th</sup> would yield a trend of +1.1 (i.e. 2.6 - 1.5 = 1.1). These trends were plotted over time using Chart.js and a regression line was fit to the data. Based on the current short-term trend and the long-term regression model, a user could predict the future demand of product.
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="btn-vert-block">
+              <a href="https://github.com/jake17007/hack8451" target="_blank" type="button" class="btn btn-primary btn-block"><i class="fa fa-github fa-fw"></i> View Source Code</a>
+
+              <ul class=" list-group lead btn-block text-center">
+                <li class="list-group-item"><strong>Technologies</strong></li>
+                <li class="list-group-item"><a href="https://www.python.org/" target="_blank">Python</a></li>
+                <li class="list-group-item"><a href="http://pandas.pydata.org/" target="_blank">Pandas</a></li>
+                <li class="list-group-item"><a href="http://www.nltk.org/" target="_blank">Natural Language Toolkit (NLTK)</a></li>
+                <li class="list-group-item"><a href="https://nodejs.org/en/" target="_blank">Node.js</a></li>
+                <li class="list-group-item"><a href="https://expressjs.com/" target="_blank">Express</a></li>
+                <li class="list-group-item"><a href="http://www.chartjs.org/" target="_blank">Chart.js</a></li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+        <!-- details would go here -->
+        <div class="row">
+          <div class="text-center center-pic">
+            <img src="img/hackathon8451.png" alt="Hackathon 84.51">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <ul class="list-inline">
+                        <li>
+                            <a href="index.html">Home</a>
+                        </li>
+                        <li class="footer-menu-divider">&sdot;</li>
+                        <li>
+                            <a href="projects.html">Projects</a>
+                        </li>
+                        <li class="footer-menu-divider">&sdot;</li>
+                        <li>
+                            <a href="Resume_08-19-2017.pdf">Resume</a>
+                        </li>
+                    </ul>
+                    <p class="copyright text-muted small">Created by Jacob Beauchamp 2017</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
